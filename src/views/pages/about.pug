@@ -1,0 +1,75 @@
+extends ../layouts/master.pug
+include ../components/breadcrumbs.pug
+
+block title
+  title Laruss - О нас
+
+block content
+
+  //- Desktop page
+  .banner-page(style="background: url('../assets/images/about-banner.jpg') no-repeat;")
+  
+  .container
+    .container-page
+      +breadcrumbs("О нас")
+      h1.page-h1 О нас
+
+  section.about-data
+    .container
+      .container-page
+        .data-restaurant
+          .data-restaurant__item
+            .data-restaurant__icon
+            .data-restaurant__info
+              .data-restaurant__title Средний чек
+              .data-restaurant__description 300 руб.
+          .data-restaurant__item
+            .data-restaurant__icon
+            .data-restaurant__info
+              .data-restaurant__title Залы
+              .data-restaurant__description 2 зала на 60 и на 10 персон
+          .data-restaurant__item
+            .data-restaurant__icon
+            .data-restaurant__info
+              .data-restaurant__title Кухня
+              .data-restaurant__description Современная русская
+          .data-restaurant__item
+            .data-restaurant__icon
+            .data-restaurant__info
+              .data-restaurant__title Развлечения
+              .data-restaurant__description шоу программы - живой вокал и шоу-балет, после шоу дискотека, работает D] с популярной танцевальной музыкой
+          .data-restaurant__item
+            .data-restaurant__icon
+            .data-restaurant__info
+              .data-restaurant__title Время работы
+              .data-restaurant__description
+                .data-restaurant__time
+                  .data-restaurant__day ПН, ВТ:
+                  .data-restaurant__hour 12:00 — 23:00
+                .data-restaurant__time
+                  .data-restaurant__day СР, ЧТ:
+                  .data-restaurant__hour 12:00 — 00:00
+                .data-restaurant__time
+                  .data-restaurant__day ПТ, СБ:
+                  .data-restaurant__hour 12:00 — 01:00
+                .data-restaurant__time
+                  .data-restaurant__day ВС:
+                  .data-restaurant__hour 12:00 — 00:00
+          .data-restaurant__item
+            .data-restaurant__icon
+            .data-restaurant__info
+              .data-restaurant__title Метро
+              .data-restaurant__description Гостиный двор, Невский проспект, Адмиралтейская
+    
+  section.about
+    .container
+      .container-page.about--container
+        p
+          |Расположенный в самом сердце Петербурга на Дворцовой площади, ресторан «LA RUSS» порадует вас своим гостеприимством и широтой русской души. Здесь встречают с улыбкой и готовят с любовью, придавая традиционной русской кухне новое звучание. Продолжая традицию ресторанов времен царской России ресторан «LA RUSS» предлагает вечерние развлечения для гостей – музыкальные шоу-программы, способные удивить даже искушенную публику своей яркой хореографией, живым эстрадным вокалом и авторскими костюмами. Все это делает ресторан «LA RUSS» популярным местом для проведения праздничного события, дружеской вечеринки или корпоративного вечера.
+        p
+          | Для гостей в нашем  ресторане работают два зала. Основной зал, рассчитанный на 60-65 человек и  отдельный VIP-зал. Интерьер ресторана о том, что русский ресторан может быть модным и стильным, интересным не только для туристов, но и для соотечественников. Именно таким вы встретите его у нас.
+        img(src="../assets/images/about-descr.jpg")
+        p
+          |Расположенный в самом сердце Петербурга на Дворцовой площади, ресторан «LA RUSS» порадует вас своим гостеприимством и широтой русской души. Здесь встречают с улыбкой и готовят с любовью, придавая традиционной русской кухне новое звучание. Продолжая традицию ресторанов времен царской России ресторан «LA RUSS» предлагает вечерние развлечения для гостей – музыкальные шоу-программы, способные удивить даже искушенную публику своей яркой хореографией, живым эстрадным вокалом и авторскими костюмами. Все это делает ресторан «LA RUSS» популярным местом для проведения праздничного события, дружеской вечеринки или корпоративного вечера.
+        p
+          | Для гостей в нашем  ресторане работают два зала. Основной зал, рассчитанный на 60-65 человек и  отдельный VIP-зал. Интерьер ресторана о том, что русский ресторан может быть модным и стильным, интересным не только для туристов, но и для соотечественников. Именно таким вы встретите его у нас.

@@ -1,0 +1,36 @@
+//- src/views/components/header.pug
+
+header.header
+  .container
+    .header__container
+      a.header__logo(href="/")
+        img(src="../assets/images/logo.png" alt="Laruss")
+      .header__menu
+        .header__menu-top
+          ul.top-links
+            li LA RUSS РЕСТОРАН & ШОУ
+            li Современная русская кухня
+            li СПБ, НАБ. РЕКИ МОЙКИ, 37
+          .lang
+            a.lang__link.lang--eng(href="#")
+            a.lang__link.lang--rus(href="#")
+        nav
+          ul.bottom-links
+            li
+              a(href="#") Наши рестораны
+            li
+              a(href="/about") О нас
+            li
+              a(href="/gallery") Фотогалерея
+            li
+              a(href="/menu") Меню
+            li
+              a(href="/poster") Афиша
+            li
+              a(href="/news") События | Акции
+            li
+              a(href="/contacts") Контакты
+      .header__reserve
+        a.header__phone(href="tel:+7 812 571 75 91") +7 812 571 75 91
+        a.header__btn.btn.btn-big.btn-reserve(href="#" data-form-type="head") Резерв
+

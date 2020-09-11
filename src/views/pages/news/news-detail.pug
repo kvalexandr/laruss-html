@@ -1,0 +1,26 @@
+extends ../../layouts/master.pug
+include ../../components/breadcrumbs.pug
+
+block title
+  title Laruss - Новости - Летняя терраса на Дворцовой площади
+
+block content
+
+  //- Desktop page
+  //.banner-page(style="background: url('../assets/images/about-banner.jpg') no-repeat;")
+  
+  .container
+    .container-page
+      +breadcrumbs("События и акции", "/news")
+      h1.page-h1 Летняя терраса на Дворцовой площади
+
+  section.news
+    .container
+      .container-page.news--container
+        .news-detail
+          .news-detail__img
+            img(src="../assets/images/news-detail.jpg")
+          .news-detail__date 4 июля
+          .news-detail__text
+            p
+              | Наслаждаемся летом и панорамным видом на Дворцовую площадь на летней террасе ресторана LA RUSS вместе с коктейлями и блюдами современной русской кухни.

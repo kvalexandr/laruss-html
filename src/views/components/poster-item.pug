@@ -1,0 +1,9 @@
+mixin poster-item(title)
+  .poster__item(class!=attributes.class)
+    img(src="../assets/images/poster-list.jpg")
+    .poster__item-info
+      .poster__item-date 15 января, Среда — 20:30
+      a.poster__item-title(href="/poster/poster-detail")= title
+      .poster__item-bottom
+        a.poster__item-video.btn.btn-small.btn-video(href="#") Видео
+        .poster__item-price 340 ₽

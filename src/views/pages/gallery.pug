@@ -1,0 +1,61 @@
+extends ../layouts/master.pug
+include ../components/breadcrumbs.pug
+
+block title
+  title Laruss - Фотогалерея
+
+block content
+
+  //- Desktop page
+  .banner-page(style="background: url('assets/images/about-banner.jpg') no-repeat;")
+  
+  .container
+    .container-page
+      +breadcrumbs("Фотогалерея")
+      h1.page-h1 Фотогалерея
+
+  section.filter
+    .container
+      .container-page
+        .filter-btn
+          button.btn.btn-big Интерьер
+          button.btn.btn-big Еда
+          button.btn.btn-big Шоу-программа
+
+  section.gallery
+    .container
+      .container-page.gallery--container
+        .gallery-block
+          h2.page-h2 Интерьер
+          .gallery__list
+            a.gallery__item(data-fancybox="images" href="assets/images/poster-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+        .gallery-block
+          h2.page-h2 Еда
+          .gallery__list
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery2.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery2.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery3.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+        .gallery-block
+          h2.page-h2 Шоу-программа
+          .gallery__list
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery2.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery2.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery3.jpg')")
+            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+      

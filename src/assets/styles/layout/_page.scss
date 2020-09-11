@@ -1,0 +1,85 @@
+/* src/assets/styles/layout/_page.scss  */
+
+.page-h1 {
+	font-family: $lato;
+	color: #000000;
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 25px;
+	padding-bottom: 30px;
+	text-transform: uppercase;
+
+	@media screen and(max-width:  $width-768) {
+		font-size: 18px;
+	}
+}
+
+.main-h1 {
+	font-family: $lato;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 36px;
+	color: #616161;
+	padding-bottom: 24px;
+	text-transform: uppercase;
+
+	@media screen and(max-width:  $width-768) {
+		padding-bottom: 20px;
+		font-size: 18px;
+		line-height: 25px;
+	}
+}
+
+.page-h2 {
+	font-family: $lato;
+	color: #2F2F2F;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 25px;
+	text-transform: uppercase;
+
+	@media screen and(max-width:  $width-768) {
+		font-size: 16px;
+	}
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+	max-width: 1440px;
+	padding: 0 54px;
+
+	@media screen and(max-width:  $width-1200) {
+		padding: 0 30px;
+	}	
+
+	@media screen and(max-width:  $width-768) {
+		padding: 0 15px;
+	}	
+}
+
+.container-page {
+	margin-left: 106px;
+
+	@media screen and(max-width:  $width-1440) {
+		margin-left: 0;
+	}
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+  flex-direction: column;
+  height: 100%;
+  top: 0;
+  left: 0;
+	margin-right: 160px;
+
+	@media screen and(max-width:  $width-1024) {
+		margin-right: 0;
+	}
+}
+
+.main-content {
+	flex: 1 0 auto;
+}

@@ -1,0 +1,174 @@
+/* src/assets/styles/pages/_poster.scss  */
+
+.poster {
+
+	&--container {
+		max-width: 870px;
+	}
+
+	&__nav {
+		padding-bottom: 30px;
+
+		&-link {
+			display: inline-block;
+	
+			&:hover {
+				opacity: .7;
+			}
+		}
+
+		&-next {
+			color: #000;
+		}
+
+		&-prev {
+			color: #828282;
+			margin-right: 40px;
+		}
+
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 40px;
+		width: calc(100% + 24px);
+
+		@media screen and(max-width:  $width-1024) {
+			width: 100%;
+		}
+
+		@media screen and(max-width:  $width-768) {
+			padding-bottom: 20px;
+		}
+	}
+
+	&__item {
+		border: 1px solid #C6C6C6;
+		width: calc(50% - 24px);
+		margin-right: 24px;
+		margin-bottom: 16px;
+		display: flex;
+		text-decoration: none;
+    
+    @media screen and(max-width:  $width-1024) {
+			width: 100%;
+			margin-right: 0;
+		}
+		
+		img {
+			width: 146px;
+
+			@media screen and(max-width:  $width-411) {
+				width: 98px;
+			}
+		}
+
+		&--wide {
+			width: calc(100% - 24px);
+
+			@media screen and(max-width:  $width-1024) {
+				width: 100%;
+			}
+		}
+
+		&-info {
+			padding: 16px 16px 16px 26px;
+
+			@media screen and(max-width:  $width-411) {
+				padding: 8px 4px 8px 10px;
+			}
+		}
+
+		&-date {
+			font-style: italic;
+			font-size: 14px;
+			line-height: 19px;
+			color: #9C9987;
+			padding-bottom: 10px;
+
+			@media screen and(max-width:  $width-411) {
+				font-size: 12px;
+				line-height: 16px;
+				padding-bottom: 5px;
+			}
+		}
+
+		&-title {
+			font-size: 18px;
+			line-height: 25px;
+			padding-bottom: 12px;
+			color: #2F2F2F;
+			text-decoration: none;
+			display: block;
+
+			@media screen and(max-width:  $width-640) {
+				font-size: 12px;
+				line-height: 16px;
+			}
+
+			&:hover {
+				opacity: .7;
+			}
+		}
+
+		&-bottom {
+			display: flex;
+			align-items: center;
+		}
+
+		&-video {
+			margin-right: 18px;
+
+			@media screen and(max-width:  $width-411) {
+				margin-right: 7px;
+			}
+		}
+
+		&-price {
+			background: #E8E8E8;
+			color: #2F2F2F;
+			padding: 3px 24px;
+			font-size: 12px;
+			line-height: 16px;
+			border-radius: 12px;
+
+			@media screen and(max-width:  $width-411) {
+				padding: 3px 16px;
+			}
+		}
+	}
+
+	&__show-more {
+		text-align: center;
+		margin-bottom: 80px;
+
+		@media screen and(max-width:  $width-768) {
+			text-align: left;
+			margin-bottom: 40px;
+		}
+	}
+
+
+	&-detail {
+
+		&__img {
+			margin-bottom: 30px;
+
+			img {
+				@media screen and(max-width:  $width-411) {
+					width: 100%;
+				}
+			}
+		}
+
+		&__price {
+			font-weight: 600;
+			font-size: 16px;
+		}
+	}
+
+	&__show-more-list {
+		margin-top: 50px;
+	}
+}

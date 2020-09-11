@@ -1,0 +1,72 @@
+/* src/assets/styles/components/_seo.scss  */
+
+.seo-block {
+	padding: 40px 0 80px 0;
+
+	@media screen and(max-width:  $width-768) {
+		padding: 20px 0 40px 0;
+	}
+}
+
+.seo {
+	padding-bottom: 64px;
+	display: flex;
+
+	@media screen and(max-width:  $width-768) {
+		flex-wrap: wrap;
+		padding-bottom: 30px;
+	}
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+
+	&__advantages {
+		min-width: 265px;
+		margin-right: 40px;
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and(max-width:  $width-768) {
+			max-width: 300px;
+			margin-bottom: 30px;
+		}
+
+		&-icon {
+			min-width: 100px;
+		}
+
+		&-title {
+			font-family: $lato;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 1.5;
+			color: #000000;
+			text-transform: uppercase;
+
+			@media screen and(max-width:  $width-768) {
+				font-size: 14px;
+			}
+		}
+	}
+
+	&__text {
+		font-family: $lato;
+		font-size: 14px;
+		line-height: 1.5;
+		color: #000000;
+
+		h2 {
+			font-family: $lato;
+			color: #2F2F2F;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 25px;
+			text-transform: uppercase;
+
+			@media screen and(max-width:  $width-768) {
+				font-size: 16px;
+			}
+		}
+	}
+}

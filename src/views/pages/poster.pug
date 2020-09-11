@@ -1,0 +1,84 @@
+extends ../layouts/master.pug
+include ../components/breadcrumbs.pug
+include ../components/poster-item.pug
+
+block title
+  title Laruss - Афиша
+
+block content
+
+  //- Desktop page
+  .banner-page(style="background: url('../assets/images/poster-banner.jpg') no-repeat;")
+  
+  .container
+    .container-page
+      +breadcrumbs("Афиша", "/poster")
+      h1.page-h1 Афиша ресторана с живой музыкой «LA RUSS»
+  
+  section.poster
+    .container
+      .container-page.poster--container
+        .poster__nav
+          a.poster__nav-link.poster__nav-prev(href="#") Предыдущая неделя
+          a.poster__nav-link.poster__nav-next(href="#") Следующая неделя
+        .poster__list
+          +poster-item('Шоу-программа с Ксюшей Арсеньевой и Ко')(class="poster__item--wide")
+          +poster-item('Шоу-программа «Russian style»')
+          +poster-item('Шоу-программа с Ксюшей Арсеньевой и Ко')
+          +poster-item('Шоу-программа «Russian style»')
+          +poster-item('Шоу-программа с Ксюшей Арсеньевой и Ко')
+
+        .poster__show-more
+          button.show-more.btn.btn-big Все шоу
+
+        .poster__show-more-list
+          h2.page-h1 Все шоу
+          .poster__list
+            +poster-item('Шоу-программа «Russian style»')
+            +poster-item('Шоу-программа с Ксюшей Арсеньевой и Ко')
+            +poster-item('Шоу-программа «Russian style»')
+            +poster-item('Шоу-программа с Ксюшей Арсеньевой и Ко')
+
+  section.seo-block
+    .container
+      .container-page.poster--container
+        .seo
+          .seo__advantages
+            .seo__advantages-icon
+              img(src="../assets/images/icons/glass.svg")
+            .seo__advantages-title Всегда звучит прекрасная музыка
+          .seo__text
+            h2 Живая музыка каждый вечер
+            p 
+              | В ресторане «Палермо» гостей ждет насыщенная развлекательная программа с живой музыкой, которая
+              | гармонично дополнит любой вечер — будь то дружеские посиделки, романтическое свидание, семейная
+              | встреча или праздник по важному поводу. После шоу гостей ждет дискотека от профессионального диджея с
+              | хитами современной танцевальной музыки. Места на танцполе хватит всем!
+            p
+              | Приходите в ресторан «Палермо» насладиться живым вокалом в исполнении профессиональных артистов,
+              | изысканными блюдами итальянской и европейской кухни, а также уютной атмосферой нашего заведения.
+
+        .seo
+          .seo__advantages
+            .seo__advantages-icon
+              img(src="../assets/images/icons/spb.svg")
+            .seo__advantages-title Ресторан в историческом центре Петербурга
+          .seo__text
+            h2 Превосходное расположение
+            p 
+              | Ресторан Palermo находится в самом сердце Санкт-Петербурга — на набережной реки Фонтанки. До
+              | заведения легко и удобно добираться, а до ключевых достопримечательностей города на Неве - всего пара
+              | шагов. Ночная прогулка станет идеальным завершением приятного вечера в ресторане с живой музыкой и
+              | танцами.
+            
+        .seo
+          .seo__advantages
+            .seo__advantages-icon
+              img(src="../assets/images/icons/microphone.svg")
+            .seo__advantages-title Мы можем подготовить шоу по вашему заказу!
+          .seo__text
+            h2 Организация мероприятий с живой музыкой
+            p 
+              | Вы запланировали банкет или торжество и не знаете, как развлечь гостей? Мы с радостью вам поможем - у нас есть замечательные артисты с готовыми шоу-программами: в стиле кабаре, с зажигательным канканом, с цыганскими романсами, театральными этюдами и многое-многое другое.
+
+              | Обращайтесь к нашим менеджерам — и мы составим для вас идеальную программу, которая сделает ваш праздник неповторимым!

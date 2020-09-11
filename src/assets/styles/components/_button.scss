@@ -1,0 +1,59 @@
+/* src/assets/styles/components/_button.scss  */
+
+.btn {
+	text-transform: uppercase;
+	background: #fff;
+	color: #2F2F2F;
+	border: 1px solid #6E6E6E;
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		background: #fff;
+	}
+
+	&:hover {
+		opacity: .7;
+	}
+}
+
+.btn-big {
+	padding: 13px 58px;
+	font-size: 14px;
+
+	&::after {
+		width: 14px;
+		height: 14px;
+	}
+}
+
+.btn-small {
+	padding: 2px 18px;
+	font-size: 12px;
+
+	&::after {
+		width: 10px;
+		height: 10px;
+	}
+}
+
+.btn-video {
+	padding-left: 28px;
+	
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		left: 15px;
+		width: 6px;
+		height: 6px;
+		background: url('../images/icons/video.svg') no-repeat;
+	}
+}

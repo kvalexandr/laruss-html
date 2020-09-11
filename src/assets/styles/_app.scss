@@ -1,0 +1,47 @@
+@import 'normalize.css';
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/modal";
+
+/*
+  Base
+*/
+@import './base/fonts';
+
+/*
+  Utils
+*/
+@import './utils/dimensions';
+@import './utils/mixins';
+@import './utils/colors';
+@import './utils/keyframes';
+
+/*
+  Components
+*/
+@import './components/header';
+@import './components/footer';
+@import './components/sidebar';
+@import './components/seo';
+@import './components/breadcrumbs';
+@import './components/button';
+@import './components/banner-page';
+@import './components/slick';
+
+/*
+  Layout
+*/
+@import './layout/page';
+@import './layout/general';
+
+/*
+  Pages
+*/
+@import './pages/index';
+@import './pages/poster';
+@import './pages/about';
+@import './pages/news';
+@import './pages/gallery';
+@import './pages/contact';

@@ -1,0 +1,90 @@
+/* src/assets/styles/pages/_about.scss  */
+
+.about {
+	margin-bottom: 80px;
+
+	@media screen and(max-width:  $width-1024) {
+		margin-bottom: 40px;
+	}
+
+	img {
+		padding: 30px 0;
+		width: 100%;
+
+		@media screen and(max-width:  $width-1024) {
+			padding: 15px 0;
+		}
+	}
+
+	&--container {
+		max-width: 630px;
+	}
+}
+
+.about-data {
+	margin-top: 18px;
+
+	.data-restaurant {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 50px;
+
+		@media screen and(max-width:  $width-1024) {
+			max-width: 700px;
+		}
+
+		@media screen and(max-width:  $width-768) {
+			margin-top: 30px;
+		}
+
+		&__item {
+			width: 33.333%;
+			display: flex;
+			padding: 0 60px 48px 0;
+
+			@media screen and(max-width:  $width-1024) {
+				width: 50%;
+				padding: 0 0 24px 0;
+			}
+
+			@media screen and(max-width:  $width-640) {
+				width: 100%;
+			}
+		}
+
+		&__icon {
+			width: 40px;
+			height: 40px;
+			margin-right: 16px;
+			background: url('/assets/images/icons/receipt.svg') no-repeat;
+		}
+
+		&__info {
+			max-width: 220px;
+		}
+
+		&__title {
+			color: #828282;
+			font-weight: 600;
+			font-size: 12px;
+			line-height: 16px;
+			text-transform: uppercase;
+			padding-bottom: 4px;
+		}
+
+		&__description {
+			font-size: 14px;
+			line-height: 1.4;
+			color: #2F2F2F;
+		}
+
+		&__time {
+			display: flex;
+		}
+
+		&__day {
+			font-weight: 600;
+			width: 60px;
+		}
+	}
+}

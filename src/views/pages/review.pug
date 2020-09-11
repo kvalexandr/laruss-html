@@ -1,0 +1,16 @@
+extends ../layouts/master.pug
+include ../components/breadcrumbs.pug
+
+block title
+  title Laruss - Отзывы
+
+block content
+
+  //- Desktop page
+  .banner-page(style="background: url('../assets/images/about-banner.jpg') no-repeat;")
+  
+  .container
+    .container-page
+      +breadcrumbs("Отзывы")
+      h1.page-h1 Отзывы
+

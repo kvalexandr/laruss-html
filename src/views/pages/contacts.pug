@@ -1,0 +1,63 @@
+extends ../layouts/master.pug
+include ../components/breadcrumbs.pug
+
+block title
+  title Laruss - Контакты
+
+block content
+  //- Delete map footer
+  | <script type="text/javascript">document.addEventListener("DOMContentLoaded", function(){const map = document.querySelector('#map');if (map) { map.remove(); }});</script>
+
+  //- Desktop page
+  #map-contact(data-lat="59.940533" data-lon="30.318976")
+  
+  .container
+    .container-page
+      +breadcrumbs("Контакты")
+      h1.page-h1 Контакты
+
+  section.contact
+    .container
+      .container-page
+        .contact-row
+          .contact-column
+            .contact-item
+              .contact-item__title Мы находимся по адресу
+              .contact-item__description Санкт-Петербург, наб. реки Мойки, 37 (угол с Дворцовой пл.)
+            .contact-item
+              .contact-item__title Время работы
+              .contact-item__description
+                .contact-item__time
+                  .contact-item__day ПН, ВТ:
+                  .contact-item__hour 12:00 — 23:00
+                .contact-item__time
+                  .contact-item__day СР, ЧТ:
+                  .contact-item__hour 12:00 — 00:00
+                .contact-item__time
+                  .contact-item__day ПТ, СБ:
+                  .contact-item__hour 12:00 — 01:00
+                .contact-item__time
+                  .contact-item__day ВС:
+                  .contact-item__hour 12:00 — 00:00
+          .contact-column
+            .contact-item
+              .contact-item__title Почта
+              .contact-item__description
+                .contact-item__subtitle Резерв столиков, заказ банкета
+                .contact-item__email Администратор ресторана 
+                  a(href="mailto:admin@laruss-spb.ru") admin@laruss-spb.ru
+              .contact-item__description
+                .contact-item__subtitle Для поставщиков
+                .contact-item__email Отдел закупок 
+                  a(href="mailto:buh@laruss-spb.ru") buh@laruss-spb.ru
+              .contact-item__description
+                .contact-item__subtitle Замечания и предложения
+                .contact-item__email Директор 
+                  a(href="mailto:svetlana2606@inbox.ru") svetlana2606@inbox.ru
+          .contact-column
+            .contact-item
+              .contact-item__title Телефон
+              .contact-item__description
+                a.contact-item__phone(href="tel:+7 812 571-75-91") +7 812 571-75-91
+                a.contact-item__phone(href="tel:+7 812 312-37-22") +7 812 312-37-22
+              a.btn.btn-big.btn-contact-review(href="/review") Отзывы

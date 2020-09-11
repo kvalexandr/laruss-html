@@ -1,0 +1,27 @@
+/* src/assets/styles/components/_breadcrumbs.scss  */
+
+.breadcrumbs {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 14px;
+	padding: 31px 0 21px 0;
+
+	@media screen and(max-width:  $width-768) {
+    padding: 21px 0 21px 0;
+  }
+
+	li:not(:last-child)::after {
+    position: relative;
+    margin: 0 12px;
+		content: "/";
+		color: #828282;
+	}
+	
+	&-item {
+		color: #828282;
+		text-decoration: underline;
+	}
+}

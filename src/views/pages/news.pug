@@ -1,0 +1,98 @@
+extends ../layouts/master.pug
+include ../components/breadcrumbs.pug
+
+block title
+  title Laruss - События и Акции
+
+block content
+
+  //- Desktop page
+  .banner-page(style="background: url('../assets/images/about-banner.jpg') no-repeat;")
+  
+  .container
+    .container-page
+      +breadcrumbs("События и акции")
+      h1.page-h1 Акции
+
+  section.news
+    .container
+      .container-page.news--container
+        .news-list
+          a.news-item(href="/news/news-detail")
+            .news-item__img
+              img(src="../assets/images/slide4.jpg")
+              .news-item__img-date
+                .news-item__img-date__num 4
+                .news-item__img-date__mon июля
+            .news-item__title Летняя терраса на Дворцовой площади
+            .news-item__date 4 июля
+            .news-item__anons Отпразднуйте Старый Новый год с русским размахом в ресторане La Russ! Вас ждет насыщенная развлекательная программа, специальное меню, шоу, музыка и ледяное шампанское в неограниченных количествах!
+          a.news-item(href="/news/news-detail")
+            .news-item__img
+              img(src="../assets/images/news2.jpg")
+              .news-item__img-date
+                .news-item__img-date__num 9
+                .news-item__img-date__mon марта
+            .news-item__title NEW! Шоу-программа «Dancing Queen»
+            .news-item__date 9 марта
+            .news-item__anons Отпразднуйте Старый Новый год с русским размахом в ресторане La Russ! Вас ждет насыщенная развлекательная программа!
+          a.news-item(href="/news/news-detail")
+            .news-item__img
+              img(src="../assets/images/news2.jpg")
+              .news-item__img-date
+                .news-item__img-date__num 4
+                .news-item__img-date__mon августа
+            .news-item__title NEW! Шоу-программа «Dancing Queen»
+            .news-item__date 9 марта
+            .news-item__anons Отпразднуйте Старый Новый год с русским размахом в ресторане La Russ! Вас ждет насыщенная развлекательная программа!
+          a.news-item(href="/news/news-detail")
+            .news-item__img
+              img(src="../assets/images/news1.jpg")
+              .news-item__img-date
+                .news-item__img-date__num 30
+                .news-item__img-date__mon сентября
+            .news-item__title Летняя терраса на Дворцовой площади
+            .news-item__date 4 июля
+            .news-item__anons Отпразднуйте Старый Новый год с русским размахом в ресторане La Russ! Вас ждет насыщенная развлекательная программа, специальное меню, шоу, музыка и ледяное шампанское в неограниченных количествах!
+
+  section.news
+    .container
+      .container-page.news--container
+        h2.page-h1 Новости
+        .news-list
+          a.news-item(href="/news/news-detail")
+            .news-item__img
+              img(src="../assets/images/news1.jpg")
+              .news-item__img-date
+                .news-item__img-date__num 4
+                .news-item__img-date__mon июля
+            .news-item__title Летняя терраса на Дворцовой площади
+            .news-item__date 4 июля
+            .news-item__anons Отпразднуйте Старый Новый год с русским размахом в ресторане La Russ! Вас ждет насыщенная развлекательная программа, специальное меню, шоу, музыка и ледяное шампанское в неограниченных количествах!
+          a.news-item(href="/news/news-detail")
+            .news-item__img
+              img(src="../assets/images/news2.jpg")
+              .news-item__img-date
+                .news-item__img-date__num 9
+                .news-item__img-date__mon марта
+            .news-item__title NEW! Шоу-программа «Dancing Queen»
+            .news-item__date 9 марта
+            .news-item__anons Отпразднуйте Старый Новый год с русским размахом в ресторане La Russ! Вас ждет насыщенная развлекательная программа!
+          a.news-item(href="/news/news-detail")
+            .news-item__img
+              img(src="../assets/images/news2.jpg")
+              .news-item__img-date
+                .news-item__img-date__num 4
+                .news-item__img-date__mon августа
+            .news-item__title NEW! Шоу-программа «Dancing Queen»
+            .news-item__date 9 марта
+            .news-item__anons Отпразднуйте Старый Новый год с русским размахом в ресторане La Russ! Вас ждет насыщенная развлекательная программа!
+          a.news-item(href="/news/news-detail")
+            .news-item__img
+              img(src="../assets/images/news1.jpg")
+              .news-item__img-date
+                .news-item__img-date__num 30
+                .news-item__img-date__mon сентября
+            .news-item__title Летняя терраса на Дворцовой площади
+            .news-item__date 4 июля
+            .news-item__anons Отпразднуйте Старый Новый год с русским размахом в ресторане La Russ! Вас ждет насыщенная развлекательная программа, специальное меню, шоу, музыка и ледяное шампанское в неограниченных количествах!
