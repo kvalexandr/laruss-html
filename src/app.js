@@ -4,15 +4,8 @@
 import 'styles/_app.scss';
 
 import 'bootstrap/js/dist/modal';
-
 import '@fancyapps/fancybox';
-import '@fancyapps/fancybox/dist/jquery.fancybox.css';
-
 import 'slick-carousel';
-import 'slick-carousel/slick/slick.css';
-
-//import Swiper from 'swiper/bundle';
-//import 'swiper/swiper-bundle.css';
 
 import 'scripts/ymaps';
 import 'scripts/sliders';

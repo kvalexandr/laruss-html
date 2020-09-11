@@ -4,12 +4,15 @@
   "description": "Laruss",
   "main": "app.js",
   "repository": "https://github.com/kvalexandr/laruss-html.git",
+  "homepage": "https://kvalexandr.github.io/laruss-html/",
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && webpack --config ./build/webpack.config.js --env.NODE_ENV=development --mode=development --progress",
     "dev-network": "webpack-dev-server --config ./build/webpack.config.js --env.NODE_ENV=development --mode=development --progress --open --host 0.0.0.0",
     "dev": "webpack-dev-server --config ./build/webpack.config.js -env.NODE_ENV=development --mode=development --progress --open",
-    "prod": "rimraf dist && webpack --config ./build/webpack.config.js --env.NODE_ENV=production --mode=production -p --progress "
+    "prod": "rimraf dist && webpack --config ./build/webpack.config.js --env.NODE_ENV=production --mode=production -p --progress ",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run prod"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",
@@ -23,6 +26,7 @@
     "eslint": "^4.19.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^3.1.0",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.7.2",
