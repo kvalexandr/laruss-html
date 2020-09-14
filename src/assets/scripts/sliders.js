@@ -22,4 +22,23 @@ $(document).ready(() => {
     slidesToScroll: 1,
   });
 
+  $('.slider-poster').slick({
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    nextArrow: '<button type="button" class="btn-slider btn-slider-next"><span></span></button>',
+    prevArrow: '<button type="button" class="btn-slider btn-slider-prev"><span></span></button>',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+    ]
+  });
+
 });

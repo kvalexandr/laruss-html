@@ -74,7 +74,7 @@ block content
               .slider-full__text
                 | Ресторан современной русской кухни выделяется не только разнообразным и колоритным меню, но и роскошным внутренним убранством. Здесь можно увидеть немало атрибутов Дворцового стиля и handmade-украшений, относящих к ярким историческим моментам. Это и репродукция легендарного пасхального яйца Фаберже, и императорская корона, и миниатюрная карета, и настоящий царский трон.
 
-        .main-card.main-card--full
+        .main-card.main-card--full.main-card--mb30
           .main-card__col
             .main-card__title Развлекательная программа
             .main-card__text.text
@@ -83,8 +83,20 @@ block content
 
         .slider-poster
           .slider-poster__item
-            .slider-poster__img
-            .slider-poster__text
+            a.slider-poster__block(href="/poster/poster-detail")
+              .slider-poster__img
+                img(src="assets/images/poster-detail.jpg")
+              .slider-poster__text Шоу-программа «Такие разные кабаре» - победитель в номинации ...
+          .slider-poster__item
+            a.slider-poster__block(href="/poster/poster-detail")
+              .slider-poster__img
+                img(src="assets/images/slide-main-poster2.jpg")
+              .slider-poster__text Шоу программа «Russian style» - это современная трактовка русского фольклора, ...
+          .slider-poster__item
+            a.slider-poster__block(href="/poster/poster-detail")
+              .slider-poster__img
+                img(src="assets/images/slide-main-poster1.jpg")
+              .slider-poster__text Шоу-программа «Такие разные кабаре» - победитель в номинации ...
 
         .main-card
           .main-card__col
