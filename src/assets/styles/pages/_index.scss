@@ -466,3 +466,74 @@
     }
   }
 }
+
+
+.poster-container {
+  display: none;
+
+  @media screen and (max-width:  $width-1024) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(100% + 20px);
+  }
+
+  @media screen and (max-width:  $width-768) {
+    width: 100%;
+  }
+
+  .poster-anons {
+    margin-right: 20px;
+    width: calc(33.333% - 20px);
+    padding: 15px 0;
+    height: 100%;
+
+    @media screen and (max-width:  $width-768) {
+      width: 100%;
+      margin-right: 0;
+    }
+    
+    &__block {
+      border: 1px solid #C6C6C6;
+    }
+
+    &__info {
+      padding: 10px;
+    }
+
+    &__date, &__price {
+      font-size: 12px;
+      line-height: 16px;
+      color: #9C9987;
+    }
+
+    &__description {
+      font-size: 12px;
+      line-height: 16px;
+
+      &--big {
+        text-transform: uppercase;
+      }
+    }
+
+    &__title {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      color: #000000;
+      text-transform: uppercase;
+      padding-bottom: 15px;
+    }
+
+    &__img {
+      height: 290px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
