@@ -22,4 +22,60 @@ $(document).ready(() => {
     slidesToScroll: 1,
   });
 
+  $('.slider-poster').slick({
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    nextArrow: '<button type="button" class="btn-slider btn-slider-next"><span></span></button>',
+    prevArrow: '<button type="button" class="btn-slider btn-slider-prev"><span></span></button>',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+    ]
+  });
+
+  $('.slider-lp').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    nextArrow: '<button type="button" class="btn-slider btn-slider-next"><span></span></button>',
+    prevArrow: '<button type="button" class="btn-slider btn-slider-prev"><span></span></button>',
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 5
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+    ]
+  });
+
 });

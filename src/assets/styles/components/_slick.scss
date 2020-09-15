@@ -2,74 +2,55 @@
 
 .slick-dotted.slick-slider
 {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .slick-dots
 {
-    position: absolute;
-    bottom: 20px;
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  height: 36px;
 }
+
 .slick-dots li
 {
-    position: relative;
-    display: inline-block;
-    width: 9px;
-    height: 9px;
-    margin: 0 5px;
-    padding: 0;
-		cursor: pointer;
-		background: #ACACAC;
-    border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin: 0 5px;
+  padding: 0;
+	cursor: pointer;
+	background: #ACACAC;
+  border-radius: 50%;
 }
 .slick-dots li button
 {
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 9px;
-    height: 9px;
-    padding: 5px;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    outline: none;
-		background: transparent;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 9px;
+  height: 9px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+	background: transparent;
 }
 .slick-dots li button:hover,
 .slick-dots li button:focus
 {
-    outline: none;
+  outline: none;
 }
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before
 {
-    opacity: 1;
-}
-.slick-dots1 li button:before
-{
-    
-		position: absolute;
-		content: "";
-    top: 0;
-    left: 0;
-
-    width: 20px;
-    height: 20px;
-
-    text-align: center;
-
-		background: black;
-	
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  opacity: 1;
 }
 
 .slick-dots li.slick-active {
@@ -82,15 +63,38 @@
 
 .slick-dots li.slick-active button:before
 {
-		position: absolute;
-		content: "";
-		top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-		width: 5px;
-    height: 5px;
-		opacity: .75;
-		text-align: center;
-		background: #ACACAC;
-		border-radius: 50%;
+	position: absolute;
+	content: "";
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	width: 5px;
+  height: 5px;
+	opacity: .75;
+	text-align: center;
+	background: #ACACAC;
+	border-radius: 50%;
+}
+
+.btn-slider {
+  border: 1px solid #C6C6C6;
+  background: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/icons/slide-arrow.svg') center center no-repeat;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+.btn-slider-next span {
+  transform: rotate(180deg);
 }

@@ -27,6 +27,63 @@ block content
             .poster-slider__anons 
               .poster-slider__date Сегодня<br>пятница, 20:30
               .poster-slider__name Dance show
+    .top-slider__social
+      a.top-slider__social-link(href="#") Vkontakte
+      a.top-slider__social-link(href="#") Instagram
+      a.top-slider__social-link(href="#") TripAdvisor
+      a.top-slider__social-link(href="#") Yandex
+      a.top-slider__social-link(href="#") Googleplus
+
+  section.anons-mainpage
+    .container
+      .poster-container
+        .poster-anons
+          .poster-anons__title Афиша
+          .poster-anons__block
+            .poster-anons__img
+              img(src="assets/images/main1.jpg")
+            .poster-anons__info
+              .poster-anons__date 15 января, Среда — 20:30
+              .poster-anons__description Шоу-программа «Russian style»
+        .poster-anons
+          .poster-anons__title Акции
+          .poster-anons__block
+            .poster-anons__img
+              img(src="assets/images/main2.jpg")
+            .poster-anons__info
+              .poster-anons__date 24 июля
+              .poster-anons__description.poster-anons__description--big Летняя терраса на дворцовой площади
+        .poster-anons
+          .poster-anons__title Проведите у нас
+          .poster-anons__block
+            .poster-anons__img
+              img(src="assets/images/main1.jpg")
+            .poster-anons__info
+              .poster-anons__description Новогодние корпаративы
+              .poster-anons__price от 3500 руб/чел.
+
+  section.slider-lp-title
+    .container
+      .slider-lp
+        .slider-lp__item
+          a.slider-lp__link.btn.btn-big 14 февраля
+        .slider-lp__item
+          a.slider-lp__link.btn.btn-big Банкет
+        .slider-lp__item
+          a.slider-lp__link.btn.btn-big День рождения
+        .slider-lp__item
+          a.slider-lp__link.btn.btn-big Корпаратив
+        .slider-lp__item
+          a.slider-lp__link.btn.btn-big Свадьба
+        .slider-lp__item
+          a.slider-lp__link.btn.btn-big Юбилей
+        .slider-lp__item
+          a.slider-lp__link.btn.btn-big Корпаратив
+        .slider-lp__item
+          a.slider-lp__link.btn.btn-big Свадьба
+        .slider-lp__item
+          a.slider-lp__link.btn.btn-big Юбилей
+
   section.main-page
     .container
       .main-page--container
@@ -74,7 +131,7 @@ block content
               .slider-full__text
                 | Ресторан современной русской кухни выделяется не только разнообразным и колоритным меню, но и роскошным внутренним убранством. Здесь можно увидеть немало атрибутов Дворцового стиля и handmade-украшений, относящих к ярким историческим моментам. Это и репродукция легендарного пасхального яйца Фаберже, и императорская корона, и миниатюрная карета, и настоящий царский трон.
 
-        .main-card.main-card--full
+        .main-card.main-card--full.main-card--mb30
           .main-card__col
             .main-card__title Развлекательная программа
             .main-card__text.text
@@ -83,8 +140,20 @@ block content
 
         .slider-poster
           .slider-poster__item
-            .slider-poster__img
-            .slider-poster__text
+            a.slider-poster__block(href="/poster/poster-detail")
+              .slider-poster__img
+                img(src="assets/images/poster-detail.jpg")
+              .slider-poster__text Шоу-программа «Такие разные кабаре» - победитель в номинации ...
+          .slider-poster__item
+            a.slider-poster__block(href="/poster/poster-detail")
+              .slider-poster__img
+                img(src="assets/images/slide-main-poster2.jpg")
+              .slider-poster__text Шоу программа «Russian style» - это современная трактовка русского фольклора, ...
+          .slider-poster__item
+            a.slider-poster__block(href="/poster/poster-detail")
+              .slider-poster__img
+                img(src="assets/images/slide-main-poster1.jpg")
+              .slider-poster__text Шоу-программа «Такие разные кабаре» - победитель в номинации ...
 
         .main-card
           .main-card__col
