@@ -222,6 +222,37 @@
   }
 }
 
+.slider-lp {
+  margin-top: 15px;
+  padding: 0 55px;
+
+  &__item {
+    padding: 0 5px;
+    display: block;
+  }
+
+  &__link {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .btn-slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &-prev {
+      left: 0;
+    }
+
+    &-next {
+      right: 0;
+    }
+  }
+}
+
 .main-page {
 
   margin-top: 40px;
