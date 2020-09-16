@@ -4,7 +4,7 @@ header.header
   .container
     .header__container
       a.header__logo(href="/")
-        img(src="../assets/images/logo.png" alt="Laruss")
+        img(src="/assets/images/logo.png" alt="Laruss")
       .header__menu
         .header__menu-top
           ul.top-links
@@ -31,6 +31,73 @@ header.header
             li
               a(href="/contacts") Контакты
       .header__reserve
+        nav.mobile-menu
+          input.mobile-menu__checkbox(type='checkbox' id="checkbox")
+          label.mobile-menu__btn(for="checkbox")
+            .mobile-menu__icon
+          .mobile-menu__container
+            .container
+              ul.mobile-menu__list
+                li.mobile-menu__item
+                  a.mobile-menu__link.parent(href="#") Наши рестораны
+                  ul.mobile-menu__sub
+                    li.mobile-menu__sub-item
+                      a.mobile-menu__sub-link(href="#") LA RUSS
+                    li.mobile-menu__sub-item
+                      a.mobile-menu__sub-link(href="#") Палермо
+                    li.mobile-menu__sub-item
+                      a.mobile-menu__sub-link(href="#") Сундук
+                    li.mobile-menu__sub-item
+                      a.mobile-menu__sub-link(href="#") Распутин
+                li.mobile-menu__item
+                  a.mobile-menu__link(href="/about") О нас
+                li.mobile-menu__item
+                  a.mobile-menu__link(href="/gallery") Фотогалерея
+                li.mobile-menu__item
+                  a.mobile-menu__link.parent(href="/menu") Меню
+                  ul.mobile-menu__sub
+                    li.mobile-menu__sub-item
+                      a.mobile-menu__sub-link(href="#") Основное меню
+                    li.mobile-menu__sub-item
+                      a.mobile-menu__sub-link(href="#") Карта бара
+                    li.mobile-menu__sub-item
+                      a.mobile-menu__sub-link(href="#") Бизнес-ланч
+                    li.mobile-menu__sub-item
+                      a.mobile-menu__sub-link(href="#") Банкетное меню
+                    li.mobile-menu__sub-item
+                      a.mobile-menu__sub-link(href="#") Фуршетное меню
+                    li.mobile-menu__sub-item
+                      a.mobile-menu__sub-link(href="#") Партнерам
+                li.mobile-menu__item
+                  a.mobile-menu__link(href="/poster") Афиша
+                li.mobile-menu__item
+                  a.mobile-menu__link(href="/news") События | Акции
+                li.mobile-menu__item
+                  a.mobile-menu__link(href="/contacts") Контакты
+            .mobile-menu__lang.container
+              .lang
+                a.lang__link.lang--eng(href="#")
+                a.lang__link.lang--rus(href="#")
+            .mobile-menu__phone.container
+              a(href="tel:+7 812 571 75 91") +7 812 571 75 91
+            .mobile-menu__restaruant.container
+              .restaruant__logo
+                .restaruant__logo-top Рестораны
+                .restaruant__logo-title SUNDUK
+                .restaruant__logo-footer RESTAURANT GROUP
+              .restaruant__links
+                a.restaruant__link.restaruant__links--current.restaurant-item(href="#")
+                  .restaurant-item__name LA RUSS
+                  .restaurant-item__type Ресторан & Шоу
+                a.restaruant__link.restaurant-item(href="#")
+                  .restaurant-item__name Палермо
+                  .restaurant-item__type Ресторан
+                a.restaruant__link.restaurant-item(href="#")
+                  .restaurant-item__name Сундук
+                  .restaurant-item__type Арт-кафе
+                a.restaruant__link.restaurant-item(href="#")
+                  .restaurant-item__name Распутин
+                  .restaurant-item__type Кафе
+
         a.header__phone(href="tel:+7 812 571 75 91") +7 812 571 75 91
         a.header__btn.btn.btn-big.btn-reserve(href="#" data-form-type="head") Резерв
-
