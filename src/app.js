@@ -12,6 +12,15 @@ import 'scripts/sliders';
 
 $(document).ready(() => {
 
+  $('.mobile-menu__link.parent').on('click', function (e) {
+    e.preventDefault();
+    $(this).next().slideToggle();
+  });
+
+  $('.mobile-menu__btn').on('click', function (e) {
+    $('.mobile-menu__container').slideToggle();
+  });
+
   function orderInit() {
     const orders = document.querySelectorAll('.btn-reserve');
     for (const order of orders) {
@@ -28,19 +37,5 @@ $(document).ready(() => {
     }
   }
   orderInit();
-
-
-
-
-
-  const questionForm = document.querySelector('.form-send-question');
-  const questionBtn = document.querySelector('.btn-send-question');
-  if (questionForm) {
-    questionBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      $('#question-form').modal('show');
-    });
-  }
-
 
 });
