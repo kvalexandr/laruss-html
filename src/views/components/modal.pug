@@ -1,0 +1,42 @@
+//- src/views/components/modal.pug
+
+#reserve.modal(style="display: none;")
+  .modal-dialog.modal-form
+    .modal-content
+      .modal-body
+        button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+        .form-modal
+          .form-image
+            img(src="assets/images/form-img.png")
+          .form-fields
+            .title Заказать столик
+            .text Данная заявка не является гарантией бронирования столика, мы подтвердим Ваш резерв в течение 24 часов
+            form(action="" class="form-send-reserve")
+              .form-row
+                .form-cell
+                  span Дата*
+                  input(autocomplete="off" type="text" name="name")
+                .form-cell
+                  span Кол-во гостей
+                  input(autocomplete="off" class="phone" placeholder="до 65" type="text" name="phone")
+              .form-row
+                .form-cell
+                  span Ваше имя*
+                  input(autocomplete="off" type="text" name="name")
+                .form-cell
+                  span Ваше телефон
+                  input(autocomplete="off" class="phone" type="text" name="phone")
+              .form-row
+                .form-cell.form-cell--full
+                  span Эл. почта
+                  input(autocomplete="off" type="text" name="name")
+              .form-row
+                .form-cell.form-cell--full.form-cell--textarea
+                  span Комментарий
+                  textarea(autocomplete="off" type="text" name="name")
+              .policy Зказывая банкет, вы принимаете <a href="#">пользовательское соглашение</a>
+              button.btn.btn-big(type="submit") Заказать
+              
+              .success-text__form Спасибо! Ваш заказ успешно отправлен.
+

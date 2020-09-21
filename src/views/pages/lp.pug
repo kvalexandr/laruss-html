@@ -1,0 +1,132 @@
+extends ../layouts/master.pug
+include ../components/breadcrumbs.pug
+
+block title
+  title Laruss - Корпаратив
+
+block content
+
+  //- Desktop page
+  .banner-page(style="background: url('../assets/images/about-banner.jpg') no-repeat;")
+  
+  .container
+    .container-page
+      +breadcrumbs("Корпаратив")
+
+  .container
+    .main-page--container
+      .main-page__title
+        img.main-page__title-icon(src="assets/images/icons/fork-knife.svg")
+        h1.main-h1 Ресторан для корпаратива LARUSS
+        p
+          | Ресторан для корпаратива LARUSS расположен в цент ре Санкт-Петербурга — на Дворцовой площади. Стильное заведение быстро стало популярным балгодаря вкусной кухне и теплой атмосфере. 
+      
+  section.spec
+    .container
+      .main-page--container
+        .spec-list
+          .spec-list__item
+            .spec-list__item-title Местоположение
+            .spec-list__item-description наб. реки Мойки, 37, на углу Дворцовой площади, м.Гостиный Двор, м.Невский проспект, м.Адмиралтейская
+          .spec-list__item
+            .spec-list__item-title Вместимость
+            .spec-list__item-description Банкет до 60 персон<br>Фуршет до 70 персон
+          .spec-list__item
+            .spec-list__item-title Залы
+            .spec-list__item-description 	2 зала на 60 и на 10 персон
+          .spec-list__item
+            .spec-list__item-title Кухня
+            .spec-list__item-description Современная русская
+          .spec-list__item
+            .spec-list__item-title Варианты меню и стоимость
+            .spec-list__item-description По меню ресторана или по готовым банкетным меню, стоимостью от 1900 руб./чел.
+          .spec-list__item
+            .spec-list__item-title Развлекательная программа
+            .spec-list__item-description Шоу программа – живой вокал и шоу-балет со среды по воскресенье. После шоу дискотека, работает DJ с популярной танцевальной музыкой
+          .spec-list__item
+            .spec-list__item-title Танцпол
+            .spec-list__item-description Есть
+          .spec-list__item
+            .spec-list__item-title Интерьер
+            .spec-list__item-description Наш интерьер выполнен в современном классическом стиле
+          .spec-list__item
+            .spec-list__item-title Дополнительно
+            .spec-list__item-description Рядом 3 центральных причала<br>Украшение зала шарами
+          .spec-list__item
+            .spec-list__item-title Время работы
+            .spec-list__item-description До 00.00/01.00 с возможностью продления
+
+  .container
+    .main-page--container
+      .text
+        p
+          | Мы специализируемся на проведении корпоративов и большой опыт наших менеджеров гарантирует безупречность организации Вашего праздника
+
+  section.menu-section-block
+    .container
+      .main-page--container
+        .menu-wrap
+          img.menu-wrap__icon(src="assets/images/icons/book-icon.svg")
+          .menu-block
+            .menu-block__title Меню
+            .menu-block__subtitle У нас есть готовые варианты банкетных предложений
+            .menu-block__info
+              ul
+                li
+                  a(href="#")
+                    .menu-block__info-number 1900
+                    .menu-block__info-cur руб./гость
+                  span.menu-block__info-link Смотреть
+                li
+                  a(href="#")
+                    .menu-block__info-number 2550
+                    .menu-block__info-cur руб./гость
+                  span.menu-block__info-link Смотреть
+                li
+                  a(href="#")
+                    .menu-block__info-number 3200
+                    .menu-block__info-cur руб./гость
+                  span.menu-block__info-link Смотреть
+                li
+                  a(href="#")
+                    .menu-block__info-text Фирменные блюда для банкетов и фуршетов
+                  span.menu-block__info-link Смотреть
+                li
+                  a(href="#")
+                    .menu-block__info-text Дополнительные блюда для банкетов и фуршетов
+                  span.menu-block__info-link Смотреть
+            .menu-block__or
+              .menu-block__or-line
+              span или
+            .menu-block__subtitle мы составим индивидуальное меню по вашему желанию и бюджету
+            .menu-block__mainmenu
+              .menu-block__mainmenu-title Основное меню и карта бара
+              a.menu-block__mainmenu-link Смотреть
+
+  section.text-lp
+    .container
+      .main-page--container
+        .text
+          h2 Корпоратив в ресторане «LA RUSS»: произведите впечатление!
+          p
+            | Корпоративные мероприятия – значимый элемент корпоративной культуры, который помогает сделать коллектив более сплоченным и целенаправленно двигаться вместе, решая приоритетные задачи компании. Для того, чтобы даже самые взыскательные сотрудники компании, а, возможно, и приглашенные партнеры остались в восторге от проведенного времени, доверьте свой праздник профессионалам. Команда ресторана «LARUSS» организует незабываемый корпоратив!
+          .images
+            img(src="assets/images/lp1.jpg")
+            img(src="assets/images/lp2.jpg")
+          h2 10 поводов провести свой корпоратив в ресторане «LA RUSS»
+          p
+            | Приглашаем всех желающих провести корпоратив в нашем ресторане и уверенно заявляем: Вы не пожалеете! Будь это день рождение компании или новогодний банкет для сотрудников – мы все организуем на высшем уровне. Ресторан «ЛЯ РУСС» - это:
+          ul
+            li удобное расположение в центре города – гостям будет несложно добираться;
+            li наличие парковки для тех, кто добирается собственным автотранспортом;
+            li уютный интерьер в духе последних тенденций дизайна и возможность по желанию украсить зал шарами;
+            li сервис высокого уровня – наши официанты знают все об этикете;
+            li лучшие повара приготовят самые вкусные блюда русской кухни;
+            li алкогольная карта позволит сделать свой выбор даже искушенному гурману;
+            li танцы на нашем танцполе позволят участникам отдохнуть и получить удовольствие от вечера;
+            li живая музыка и авторские шоу-программы, которые традиционно проходят в нашем ресторане, приведут в восторг всех гостей;
+            li возможность выбора меню из представленных готовых вариантов или же формирование меню согласно индивидуальному заказу;
+            li возможность организации предновогоднего и новогоднего корпоратива для вашей компании;
+            li возможность разнообразить программу вечера, включив в нее водную прогулку, ведь наш ресторан расположен вблизи сразу трех причалов реки Мойки.
+          p
+            | Корпоратив в ресторане «LA RUSS» - это правильный выбор мудрых руководителей!

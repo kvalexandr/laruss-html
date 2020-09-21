@@ -32,42 +32,4 @@ html(lang='ru')
       //- Sidebar
       include ../components/sidebar.pug
 
-    |<div style="display: none;" id="reserve" class="modal">
-    |    <div class="modal-dialog modal-form">
-    |        <div class="modal-content">
-    |            <div class="modal-body">
-    |                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    |                    <span aria-hidden=" true">&times;</span>
-    |                </button>
-    |
-    |                <div class="form-record-modal">
-    |                    <div class="title">Задать вопрос</div>
-    |                    <form action="" class="form-send-question">
-    |                        <div class="form-record__row">
-    |                            <div class="form-record__cell">
-    |                                <input autocomplete="off" placeholder="Ваше имя" type="text" name="name" />
-    |                            </div>
-    |                            <div class="form-record__cell">
-    |                                <input autocomplete="off" class="phone" placeholder="Ваш телефон*" type="text"
-    |                                    name="phone" />
-    |                            </div>
-    |                        </div>
-    |                        <div class="form-record__row">
-    |                            <textarea name="comment" placeholder="Ваш вопрос*"></textarea>
-    |                        </div>
-    |                        <input type="hidden" value="" name="direction">
-    |                        <input type="hidden" value="" name="services">
-    |                        <input type="hidden" value="" name="form_type">
-    |                        <button class="btn btn-green btn-send-question" type="submit">Отправить</button>
-    |
-    |                        <div class="policy">
-    |                            Нажимая кнопку «Отправить» вы соглашаетесь
-    |                            с политикой обработки персональных данных.
-    |                        </div>
-    |                        <div class="success-text__form">Спасибо! Ваш вопрос успешно отправлен.</div>
-    |                    </form>
-    |                </div>
-    |            </div>
-    |        </div>
-    |    </div>
-    |</div>
+      include ../components/modal.pug
