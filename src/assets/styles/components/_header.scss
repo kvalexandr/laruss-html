@@ -158,7 +158,7 @@
   left: 0;
   right: 0;
   height: 50px;
-	z-index: 9999999;
+	z-index: 10;
 	
 	@media screen and(max-width:  $width-1024) {
 		display: flex;
@@ -246,9 +246,7 @@
 .mobile-menu__checkbox:checked ~ .mobile-menu__nav {
   opacity: 1;
 }
-.mobile-menu__checkbox:checked ~ .mobile-menu__container {
-	//display: block;
-}
+
 .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon {
   background: transparent;
 }
