@@ -103,6 +103,42 @@ block content
               .menu-block__mainmenu-title Основное меню и карта бара
               a.menu-block__mainmenu-link Смотреть
 
+  .container
+    .main-page--container
+      .form-modal
+          .form-image
+            img(src="assets/images/form-img.png")
+          .form-fields
+            .title Заказать столик
+            .text Данная заявка не является гарантией бронирования столика, мы подтвердим Ваш резерв в течение 24 часов
+            form(action="" class="form-send-reserve")
+              .form-row
+                .form-cell
+                  span Дата*
+                  input(autocomplete="off" type="text" name="name")
+                .form-cell
+                  span Кол-во гостей
+                  input(autocomplete="off" class="phone" placeholder="до 65" type="text" name="phone")
+              .form-row
+                .form-cell
+                  span Ваше имя*
+                  input(autocomplete="off" type="text" name="name")
+                .form-cell
+                  span Ваше телефон
+                  input(autocomplete="off" class="phone" type="text" name="phone")
+              .form-row
+                .form-cell.form-cell--full
+                  span Эл. почта
+                  input(autocomplete="off" type="text" name="name")
+              .form-row
+                .form-cell.form-cell--full.form-cell--textarea
+                  span Комментарий
+                  textarea(autocomplete="off" type="text" name="name")
+              .policy Зказывая банкет, вы принимаете <a href="#">пользовательское соглашение</a>
+              button.btn.btn-big(type="submit") Заказать
+              
+              .success-text__form Спасибо! Ваш заказ успешно отправлен.            
+
   section.text-lp
     .container
       .main-page--container
