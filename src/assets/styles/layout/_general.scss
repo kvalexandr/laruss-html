@@ -56,6 +56,14 @@ li {
   list-style-type: none;
 }
 
+a {
+  color: #2F2F2F;
+}
+
+a:visited, a:focus, a:hover {
+  opacity: .5;
+}
+
 .text {
 
   li {

@@ -14,3 +14,79 @@ block content
       +breadcrumbs("Отзывы")
       h1.page-h1 Отзывы
 
+  section.review
+    .container
+      .container-page
+        h2.page-h2 Спасибо что выбрали ресторан LA RUSS!
+        p
+          | Мы будем благодарны, если вы поделитесь впечатлениями, и оставите отзыв на одной из площадок
+        .review-services
+          a.review-service(href="#")
+            img.review-service__image(src="assets/images/review-google-maps.png")
+            .review-service__title Google maps
+          a.review-service(href="#")
+            img.review-service__image(src="assets/images/review-yandex-maps.png")
+            .review-service__title Yandex maps
+          a.review-service(href="#")
+            img.review-service__image(src="assets/images/review-tripadvisor.png")
+            .review-service__title TripAdvisor
+        h2.page-h2 Оставить отзыв на сайте
+
+        .form-page
+          .form-fields
+            form(action="" class="form-send-reserve")
+              .form-row
+                .form-cell.form-cell--full.form-cell--textarea
+                  span Отзыв*
+                  textarea(autocomplete="off" type="text" name="review")
+              .form-row
+                .form-cell
+                  span Ваше имя*
+                  input(autocomplete="off" type="text" name="name")
+                .form-cell
+                  span Эл. почта
+                  input(autocomplete="off" type="email" name="email")
+              
+              .policy Нажимая кнопку «Отправить» вы соглашаетесь с <a href="#">политикой обработки персональных данных</a>.
+              button.btn.btn-big(type="submit") Отправить
+              
+              .success-text__form Спасибо! Ваш отзыв успешно отправлен.     
+        .review-list
+          .review-item
+            .review-row
+              .review-col.review-col-1
+                .review-name Ирина Перевалова
+                .review-date 7 августа 2020 в 20:11
+              .review-col.review-col-2
+                .review-text
+                  | Добрый день!<br>
+                  | Нам невероятно приятно слышать такие слова о нашем заведении!<br>
+                  | Надеемся, мы сможем не раз ещё порадовать Вас нашим сервисом, блюдами, а так же нашей шоу-программой!
+            .review-row
+              .review-col.review-col-1
+                .review-name Менеджер Диана
+                .review-date 8 августа 2020 в 12:22
+              .review-col.review-col-2
+                .review-text
+                  | Благодарим Вас, за тёплые слова.<br>
+                  | Надеемся увидеть Вас снова.
+          .review-item
+            .review-row
+              .review-col.review-col-1
+                .review-name Ирина Перевалова
+                .review-date 7 августа 2020 в 20:11
+              .review-col.review-col-2
+                .review-text
+                  | Добрый день!<br>
+                  | Нам невероятно приятно слышать такие слова о нашем заведении!<br>
+                  | Надеемся, мы сможем не раз ещё порадовать Вас нашим сервисом, блюдами, а так же нашей шоу-программой!
+            .review-row
+              .review-col.review-col-1
+                .review-name Менеджер Диана
+                .review-date 8 августа 2020 в 12:22
+              .review-col.review-col-2
+                .review-text
+                  | Благодарим Вас, за тёплые слова.<br>
+                  | Надеемся увидеть Вас снова.
+          .review-more
+            a.review-show-more(href="#") Показать еще отзывы
