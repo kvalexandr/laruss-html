@@ -15,21 +15,43 @@ header.header
             a.lang__link.lang--eng(href="#")
             a.lang__link.lang--rus(href="#")
         nav
-          ul.bottom-links
-            li
-              a(href="#") Наши рестораны
-            li
-              a(href="/about") О нас
-            li
-              a(href="/gallery") Фотогалерея
-            li
-              a(href="/menu") Меню
-            li
-              a(href="/poster") Афиша
-            li
-              a(href="/news") События | Акции
-            li
-              a(href="/contacts") Контакты
+          ul.menu
+            li.menu-item.parent
+              a.menu-link(href="#") Наши рестораны
+              ul.menu__sub
+                li.menu__sub-item
+                  a.menu__sub-link(href="#") LA RUSS
+                li.menu__sub-item
+                  a.menu__sub-link(href="#") Палермо
+                li.menu__sub-item
+                  a.menu__sub-link(href="#") Сундук
+                li.menu__sub-item
+                  a.menu__sub-link(href="#") Распутин
+            li.menu-item
+              a.menu-link(href="/about") О нас
+            li.menu-item
+              a.menu-link(href="/gallery") Фотогалерея
+            li.menu-item.parent
+              a.menu-link(href="/menu") Меню
+              ul.menu__sub
+                li.menu__sub-item
+                  a.menu__sub-link(href="#") Основное меню
+                li.menu__sub-item
+                  a.menu__sub-link(href="#") Карта бара
+                li.menu__sub-item
+                  a.menu__sub-link(href="#") Бизнес-ланч
+                li.menu__sub-item
+                  a.menu__sub-link(href="#") Банкетное меню
+                li.menu__sub-item
+                  a.menu__sub-link(href="#") Фуршетное меню
+                li.menu__sub-item
+                  a.menu__sub-link(href="#") Партнерам
+            li.menu-item
+              a.menu-link(href="/poster") Афиша
+            li.menu-item
+              a.menu-link(href="/news") События | Акции
+            li.menu-item
+              a.menu-link(href="/contacts") Контакты
       .header__reserve
         nav.mobile-menu
           input.mobile-menu__checkbox(type='checkbox' id="checkbox")

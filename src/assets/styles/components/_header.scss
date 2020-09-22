@@ -73,7 +73,7 @@
 			
 		}
 
-		.bottom-links {
+		.menu {
 			display: flex;
 			justify-content: space-between;
 			list-style: none;
@@ -90,7 +90,23 @@
 				font-size: 10px;
 			}
 
-			a {
+			&-item {
+				position: relative;
+
+				&.parent::after {
+					content: "";
+					background: url("../images/icons/menu-arrow.svg") no-repeat;
+					width: 5px;
+					height: 3px;
+					display: block;
+					position: absolute;
+					right: -10px;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+
+			&-link {
 				text-transform: uppercase;
 				color: #2F2F2F;
 				text-decoration: none;
@@ -98,6 +114,33 @@
 				&:hover {
 					opacity: .7;
 				}
+			}
+
+			&__sub {
+				display: none;
+				background: #fff;
+				z-index: 2;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				min-width: 200px;
+				padding: 20px;
+
+				&-item {
+					padding-bottom: 5px;
+				}
+
+				&-link {
+					text-decoration: none;
+
+					&:hover {
+						opacity: .7;
+					}
+				}
+			}
+
+			.parent:hover .menu__sub {
+				display: block;
 			}
 		}
 
