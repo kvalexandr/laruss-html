@@ -1,0 +1,113 @@
+/* src/assets/styles/pages/_menu.scss  */
+
+.rmenu {
+	margin-bottom: 60px;
+
+	&--container {
+		max-width: 966px;
+		display: flex;
+	}
+
+	&-side {
+		flex: 0 0 240px;
+		margin-right: 80px;
+
+		@media screen and(max-width:  $width-1024) {
+			display: none;
+		}
+
+		&__item {
+			margin-bottom: 40px;
+		}
+
+		&__hello {
+			margin-top: 16px;
+		}
+
+		&__titles {
+			margin-top: 8px;
+		}
+
+		&__title {
+			margin-top: 8px;
+			display: block;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&__tools-link {
+			display: block;
+			color: #828282;
+			font-size: 12px;
+			line-height: 16px;
+			text-decoration: none;
+			position: relative;
+			padding-left: 25px;
+			margin-bottom: 15px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		&__print::before {
+			background: url('/assets/images/icons/print.png') no-repeat;
+			background-size: cover;
+		}
+
+		&__kitchen::before {
+			background: url('/assets/images/icons/kitchen.png') no-repeat;
+			background-size: cover;
+		}
+
+		&__download::before {
+			background: url('/assets/images/icons/download.png') no-repeat;
+			background-size: cover;
+		}
+
+	}
+
+	&-main	{
+		flex: 1 0 auto;
+		background-color: #F6F2EE;
+		padding: 64px;
+
+		@media screen and(max-width:  $width-768) {
+			margin-right: -15px;
+			margin-left: -15px;
+		}
+
+		@media screen and(max-width:  $width-1024) {
+			padding: 40px 15px;
+		}
+
+		h2 {
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 27px;
+			text-transform: uppercase;
+			color: #333333;
+
+			@media screen and(max-width:  $width-1024) {
+				font-weight: 600;
+				font-size: 15px;
+				line-height: 20px;
+			}
+	
+		}
+	}
+
+}

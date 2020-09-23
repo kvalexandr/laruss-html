@@ -2,15 +2,64 @@ extends ../layouts/master.pug
 include ../components/breadcrumbs.pug
 
 block title
-  title Laruss - Меню
+  title Laruss - Основное меню
 
 block content
 
   //- Desktop page
-  .banner-page(style="background: url('../assets/images/about-banner.jpg') no-repeat;")
-  
+  .slider-top-wrapper
+    .slider-top
+      .slide-top
+        .slide-top-image(style="background-image: url('assets/images/slide-menu1.jpg')")
+      .slide-top
+        .slide-top-image(style="background-image: url('assets/images/slide1.jpg')")
+      .slide-top
+        .slide-top-image(style="background-image: url('assets/images/slide2.jpg')")
+    .slider-top-arrows
+      <button type="button" class="btn-slider-white top-btn-slider-prev btn-slider-prev"><span></span></button>
+      <button type="button" class="btn-slider-white top-btn-slider-next btn-slider-next"><span></span></button>
+      
   .container
     .container-page
       +breadcrumbs("Меню")
-      h1.page-h1 Меню
+      h1.page-h1 Основное меню
 
+  section.rmenu
+    .container
+      .container-page
+        .rmenu--container
+          .rmenu-side
+            .rmenu-side__item
+              .rmenu-side__icon
+                img(src="assets/images/icons/menu-side-food.svg")
+              .rmenu-side__hello Дорогие гости!
+              .rmenu-side__titles
+                a.rmenu-side__title(href="#") ХОЛОДНЫЕ ЗАКУСКИ / Cold starters
+                a.rmenu-side__title(href="#") АССОРТИ / Assorted
+                a.rmenu-side__title(href="#") САЛАТЫ / Salads
+                a.rmenu-side__title(href="#") ГОРЯЧИЕ ЗАКУСКИ / Hot starters
+                a.rmenu-side__title(href="#") ПИРОЖКИ / Pies
+                a.rmenu-side__title(href="#") СУПЫ / Soups
+                a.rmenu-side__title(href="#") БЛЮДА ИЗ РЫБЫ И МОРЕПРОДУКТОВ / Main course fish and sea-foods
+                a.rmenu-side__title(href="#") БЛЮДА ИЗ МЯСА / Main course meat
+                a.rmenu-side__title(href="#") ХЛЕБ / Bread
+                a.rmenu-side__title(href="#") ДЕСЕРТЫ / Desserts
+            .rmenu-side__item
+              .rmenu-side__icon
+                img(src="assets/images/icons/menu-side-wine.svg")
+              .rmenu-side__titles
+                a.rmenu-side__title(href="#") ШАМПАНСКОЕ И ИГРИСТЫЕ ВИНА
+                a.rmenu-side__title(href="#") ВИНА ПО БОКАЛАМ
+                a.rmenu-side__title(href="#") БЕЛЫЕ ВИНА
+                a.rmenu-side__title(href="#") РОЗОВЫЕ ВИНА
+                a.rmenu-side__title(href="#") КРАСНЫЕ ВИНА
+                a.rmenu-side__title(href="#") ПОРТВЕЙН
+                a.rmenu-side__title(href="#") АПЕРИТИВЫ, ЛИКЁРЫ
+                a.rmenu-side__title(href="#") ВОДКА, НАСТОЙКИ
+            .rmenu-side__tools
+              a.rmenu-side__print.rmenu-side__tools-link(href="#") Распечатать меню
+              a.rmenu-side__kitchen.rmenu-side__tools-link(href="#") О руской кухне
+              a.rmenu-side__download.rmenu-side__tools-link(href="#") Скачать договор
+
+          .rmenu-main
+            h2 Холодные закуски
