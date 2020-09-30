@@ -22,7 +22,7 @@ function init() {
         // Опции
         // Своё изображение иконки метки.
         iconLayout: 'default#image',
-        iconImageHref: 'assets/images/icons/place.png',
+        iconImageHref: '../images/icons/place.png',
         // Размеры метки.
         iconImageSize: [48, 48],
         // Смещение левого верхнего угла иконки относительно
@@ -59,7 +59,7 @@ function initContact() {
         // Опции
         // Своё изображение иконки метки.
         iconLayout: 'default#image',
-        iconImageHref: 'assets/images/icons/place.png',
+        iconImageHref: '../images/icons/place.png',
         // Размеры метки.
         iconImageSize: [48, 48],
         // Смещение левого верхнего угла иконки относительно
