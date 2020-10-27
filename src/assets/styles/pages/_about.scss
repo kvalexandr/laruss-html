@@ -19,6 +19,17 @@
 	&--container {
 		max-width: 630px;
 	}
+
+	&-btn {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 50px;
+
+		.btn {
+			margin-right: 32px;
+			margin-bottom: 20px;
+		}
+	}
 }
 
 .about-data {

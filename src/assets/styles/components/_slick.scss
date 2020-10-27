@@ -2,7 +2,7 @@
 
 .slick-dotted.slick-slider
 {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .slick-dots
@@ -27,6 +27,9 @@
 	cursor: pointer;
 	background: #ACACAC;
   border-radius: 50%;
+}
+.slider-full .slick-dots li {
+  background: #fff;
 }
 .slick-dots li button
 {
@@ -61,6 +64,10 @@
 	position: relative;
 }
 
+.slider-full .slick-dots li.slick-active {
+  border: 1px solid #fff;
+}
+
 .slick-dots li.slick-active button:before
 {
 	position: absolute;
@@ -74,6 +81,10 @@
 	text-align: center;
 	background: #ACACAC;
 	border-radius: 50%;
+}
+
+.slider-full li.slick-active button:before {
+  background: #fff;
 }
 
 .btn-slider {

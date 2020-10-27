@@ -34,7 +34,7 @@ block content
 
         .form-page
           .form-fields
-            form(action="" class="form-send-reserve")
+            form.form-send-review(action="/" method="post")
               .form-row
                 .form-cell.form-cell--full.form-cell--textarea
                   span Отзыв*
@@ -47,8 +47,9 @@ block content
                   span Эл. почта
                   input(autocomplete="off" type="email" name="email")
               
-              .policy Нажимая кнопку «Отправить» вы соглашаетесь с <a href="#">политикой обработки персональных данных</a>.
-              button.btn.btn-big(type="submit") Отправить
+              .policy Нажимая кнопку «Отправить» вы соглашаетесь с <a href="/policy/">политикой обработки персональных данных</a>.
+              button.btn.btn-big.btn-send-review(type="submit") Отправить
+              button.btn.btn-big.show-review(data-btn-show="Смотреть отзывы" data-btn-hide="Скрыть отзывы") Смотреть отзывы
               
               .success-text__form Спасибо! Ваш отзыв успешно отправлен.     
         .review-list

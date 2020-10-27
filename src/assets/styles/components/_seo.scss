@@ -29,7 +29,7 @@
 
 		@media screen and(max-width:  $width-768) {
 			max-width: 300px;
-			margin-bottom: 30px;
+			margin-bottom: 5px;
 		}
 
 		&-icon {
@@ -41,7 +41,7 @@
 			font-weight: 600;
 			font-size: 16px;
 			line-height: 1.5;
-			color: #000000;
+			color: #2f2f2f;
 			text-transform: uppercase;
 
 			@media screen and(max-width:  $width-768) {
@@ -65,7 +65,7 @@
 			text-transform: uppercase;
 
 			@media screen and(max-width:  $width-768) {
-				font-size: 16px;
+				display: none;
 			}
 		}
 	}

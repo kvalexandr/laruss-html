@@ -4,6 +4,10 @@
 	padding: 16px 0;
 	height: 120px;
 	flex: 0 0 auto;
+
+	@media screen and(max-width:  $width-1024) {
+		height: 145px;
+	}
 	
 	&__container {
 		display: flex;
@@ -12,17 +16,23 @@
 
 	&__logo {
 		flex: 0;
+
+		img {
+			@media screen and(max-width:  $width-1024) {
+				width: 48px;
+			}
+		}
 	}
 
 	&__btn {
 		@media screen and(max-width:  $width-1024) {
-			padding: 13px 38px;
+			padding: 12px 36px;
 		}
 	}
 
 	&__menu {
 		flex: 1;
-		margin: 9px 57px 0;
+		margin: 10px 50px 0 32px;
 
 		@media screen and(max-width:  $width-1110) {
 			margin: 9px 30px 0;
@@ -54,17 +64,20 @@
 			}
 
 			li {
-				font-weight: 600;
 				text-transform: uppercase;
 				color: #A8A28F;
 				text-decoration: none;
 			}
 
+			li:first-child {
+				font-weight: 600;
+			}
+
 			li + li::before {
 				content: "|";
-				padding: 0 10px;
+				margin: 0 10px;
 				color: #A8A28F;
-				font-weight: 600;
+				display: inline-block;
 
 				@media screen and(max-width:  $width-1366) {
 					padding: 0 3px;
@@ -111,8 +124,12 @@
 				color: #2F2F2F;
 				text-decoration: none;
 
+				&.active {
+					color: #a8a28f;
+				}
+
 				&:hover {
-					opacity: .7;
+					color: #a8a28f;
 				}
 			}
 
@@ -156,7 +173,7 @@
 
 		&--rus {
 			background: url('../images/icons/lang-rus.jpg');
-			margin-left: 3px;
+			margin-left: 7px;
 		}
 
 		&--eng {
@@ -168,10 +185,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-top: 11px;
+		margin-top: 9px;
 
 		@media screen and(max-width:  $width-1024) {
 			flex-direction: row-reverse;
+			margin-top: 0;
 		}
 	}
 
@@ -179,18 +197,28 @@
 		color: #2F2F2F;
 		text-decoration: none;
 		font-weight: 600;
-		margin-bottom: 10px;
+		margin-bottom: 8px;
 
 		@media screen and(max-width:  $width-1024) {
 			overflow: hidden;
 			background: url('../images/icons/phone.svg') center center no-repeat;
 			color: #fff;
-			margin-left: 23px;
+			margin-left: 19px;
 			margin-bottom: 0;
 			width: 25px;
 			height: 25px;
 			display: block;
 			font-size: 0;
+		}
+	}
+
+	&-address-mobile {
+		text-align: center;
+		margin-top: 15px;
+		display: none;
+
+		@media screen and(max-width:  $width-1024) {
+			display: block;
 		}
 	}
 
@@ -209,6 +237,10 @@
 	
 	@media screen and(max-width:  $width-1024) {
 		display: flex;
+	}
+
+	@media screen and(max-width:  $width-768) {
+		padding: 0 0 0 26px;
 	}
 }
 .mobile-menu__btn {
@@ -247,7 +279,7 @@
 .mobile-menu__container {
   position: absolute;
 	flex-direction: column;
-  top: 119px;
+  top: 145px;
   left: 0;
   right: 0;
   z-index: 999;

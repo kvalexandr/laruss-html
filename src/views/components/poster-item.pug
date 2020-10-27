@@ -1,9 +1,10 @@
 mixin poster-item(title)
   .poster__item(class!=attributes.class)
-    img(src="../assets/images/poster-list.jpg")
+    a.poster__item-link(href="/poster/poster-detail")
+      img(src="../assets/images/poster-list.jpg")
     .poster__item-info
       .poster__item-date 15 января, Среда — 20:30
-      a.poster__item-title(href="/poster/poster-detail")= title
+      a.poster__item-link(href="/poster/poster-detail").poster__item-title= title
       .poster__item-bottom
-        a.poster__item-video.btn.btn-small.btn-video(href="#") Видео
+        button.poster__item-video.btn.btn-small.btn-video(data-target="#video-modal" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk") Видео
         .poster__item-price 340 ₽

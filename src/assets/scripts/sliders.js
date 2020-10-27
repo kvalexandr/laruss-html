@@ -41,11 +41,84 @@ $(document).ready(() => {
     ]
   });
 
+
+  let sliderPosterList = $('.poster__list-slider');
+  sliderPosterList.slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 800,
+    adaptiveHeight: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  });
+
+  sliderPosterList.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+    var i = (currentSlide ? currentSlide : 0) + 1;
+    if (i === slick.slideCount) $('.poster__nav-next').addClass('poster__list-end');
+    else $('.poster__nav-next').removeClass('poster__list-end');
+
+    if (i === 1) $('.poster__nav-prev').addClass('poster__list-end');
+    else $('.poster__nav-prev').removeClass('poster__list-end');
+  });
+
+  $('.poster__nav-next').on('click', function (e) {
+    e.preventDefault();
+    sliderPosterList.slick('slickNext');
+  });
+
+  $('.poster__nav-prev').on('click', function (e) {
+    e.preventDefault();
+    sliderPosterList.slick('slickPrev');
+  });
+
+
+
+
+  let pages = $('.poster-detail__slider-cnt');
+  let sliderPoster = $('.poster-detail__slider-container');
+
+  sliderPoster.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+    var i = (currentSlide ? currentSlide : 0) + 1;
+    pages.text(i + ' из ' + slick.slideCount);
+  });
+
+  sliderPoster.slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    responsive: true,
+    asNavFor: '.poster-detail__slider-vertical',
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: '<button type="button" class="btn-slider btn-slider-next"><span></span></button>',
+    prevArrow: '<button type="button" class="btn-slider btn-slider-prev"><span></span></button>',
+  });
+
+  $('.poster-detail__slider-vertical').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    vertical: true,
+    verticalSwiping: true,
+    asNavFor: '.poster-detail__slider-container',
+    speed: 800,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    centerMode: true,
+    nextArrow: '<button type="button" class="btn-slider btn-slider-next"><span></span></button>',
+    prevArrow: '<button type="button" class="btn-slider btn-slider-prev"><span></span></button>',
+  });
+
+
   $('.slider-lp').slick({
     dots: false,
     arrows: true,
     infinite: true,
     speed: 800,
+    variableWidth: true,
     slidesToShow: 6,
     slidesToScroll: 1,
     nextArrow: '<button type="button" class="btn-slider btn-slider-next"><span></span></button>',
@@ -66,13 +139,15 @@ $(document).ready(() => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3
+          variableWidth: true,
+          arrows: false
         }
       },
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 1
+          variableWidth: true,
+          arrows: false
         }
       },
     ]

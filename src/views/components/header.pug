@@ -28,7 +28,7 @@ header.header
                 li.menu__sub-item
                   a.menu__sub-link(href="#") Распутин
             li.menu-item
-              a.menu-link(href="/about") О нас
+              a.menu-link.active(href="/about") О нас
             li.menu-item
               a.menu-link(href="/gallery") Фотогалерея
             li.menu-item.parent
@@ -46,6 +46,10 @@ header.header
                   a.menu__sub-link(href="#") Фуршетное меню
                 li.menu__sub-item
                   a.menu__sub-link(href="#") Партнерам
+                li.menu__sub-item
+                  div(style="display:block;border-bottom: 1px dashed #999;height: 2px;margin-right: 20px;")
+                li.menu__sub-item
+                  a.menu__sub-link(href="#") Меню для предновогоднего банкета
             li.menu-item
               a.menu-link(href="/poster") Афиша
             li.menu-item
@@ -122,4 +126,5 @@ header.header
                   .restaurant-item__type Кафе
 
         a.header__phone(href="tel:+7 812 571 75 91") +7 812 571 75 91
-        a.header__btn.btn.btn-big.btn-reserve(href="#" data-form-type="head") Резерв
+        a.header__btn.btn.btn-big.btn-reserve(href="#" data-target="#reserve" data-toggle="modal") Резерв
+    .header-address-mobile СПБ, наб. реки Мойки, 37

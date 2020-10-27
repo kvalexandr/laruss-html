@@ -1,7 +1,7 @@
 /* src/assets/styles/pages/_contact.scss  */
 
 #map-contact {
-  height: 450px;
+  height: 380px;
   width: 100%;
 
   @media screen and(max-width:  $width-1024) {
@@ -51,7 +51,7 @@
     margin-bottom: 40px;
 
     &__title {
-      font-weight: 800;
+      font-weight: 700;
       font-size: 14px;
       line-height: 19px;
       color: #000;

@@ -2,24 +2,31 @@ extends ../layouts/master.pug
 include ../components/breadcrumbs.pug
 
 block title
-  title Laruss - Корпаратив
+  title Laruss - Корпоратив
 
 block content
 
   //- Desktop page
+  .lp-page-title Корпоратив
+  .lp-page-title-mobile Корпоратив
+    ul.lp-page-list
+      li.lp-page-list__item
+        a.lp-page-list__link(href="#") День рождения
+      li.lp-page-list__item
+        a.lp-page-list__link(href="#") 14 февраля
   .banner-page(style="background: url('../assets/images/about-banner.jpg') no-repeat;")
   
   .container
     .container-page
-      +breadcrumbs("Корпаратив")
+      +breadcrumbs("Корпоратив")
 
   .container
     .main-page--container
       .main-page__title
         img.main-page__title-icon(src="assets/images/icons/fork-knife.svg")
-        h1.main-h1 Ресторан для корпаратива LARUSS
+        h1.main-h1 Ресторан для корпоратива LARUSS
         p
-          | Ресторан для корпаратива LARUSS расположен в цент ре Санкт-Петербурга — на Дворцовой площади. Стильное заведение быстро стало популярным балгодаря вкусной кухне и теплой атмосфере. 
+          | Ресторан для корпоратива LARUSS расположен в цент ре Санкт-Петербурга — на Дворцовой площади. Стильное заведение быстро стало популярным балгодаря вкусной кухне и теплой атмосфере. 
       
   section.spec
     .container
@@ -115,21 +122,21 @@ block content
               .form-row
                 .form-cell
                   span Дата*
-                  input(autocomplete="off" type="text" name="name")
+                  input.input-w90(autocomplete="off" type="text" name="name")
                 .form-cell
                   span Кол-во гостей
-                  input(autocomplete="off" class="phone" placeholder="до 65" type="text" name="phone")
+                  input.input-w90(autocomplete="off" class="phone" placeholder="до 65" type="text" name="phone")
               .form-row
                 .form-cell
                   span Ваше имя*
-                  input(autocomplete="off" type="text" name="name")
+                  input.input-w90(autocomplete="off" type="text" name="name")
                 .form-cell
-                  span Ваше телефон
-                  input(autocomplete="off" class="phone" type="text" name="phone")
+                  span Телефон
+                  input.input-w70(autocomplete="off" class="phone" type="text" name="phone")
               .form-row
                 .form-cell.form-cell--full
                   span Эл. почта
-                  input(autocomplete="off" type="email" name="email")
+                  input.input-w70(autocomplete="off" type="email" name="email")
               .form-row
                 .form-cell.form-cell--full.form-cell--textarea
                   span Комментарий
@@ -166,3 +173,29 @@ block content
             li возможность разнообразить программу вечера, включив в нее водную прогулку, ведь наш ресторан расположен вблизи сразу трех причалов реки Мойки.
           p
             | Корпоратив в ресторане «LA RUSS» - это правильный выбор мудрых руководителей!
+        .score
+          .score__num Оценка мероприятия: <span>4.5</span> / 5
+          .score__count (<span>7</span> оценок)
+          .score__star
+              | <div class="rating-area-score">
+              |     <span class="fill-star"></span>
+              |     <span class="fill-star"></span>
+              |     <span class="fill-star"></span>
+              |     <span class="fill-star"></span>
+              |     <span></span>
+              | </div>
+
+          .score__est-title Оцение наше мероприятие
+          .score__star
+              | <div class="rating-area">
+              |     <input required type="radio" id="star-5" name="rating" value="5">
+              |     <label for="star-5" title="Оценка «5»"></label>
+              |     <input required type="radio" id="star-4" name="rating" value="4">
+              |     <label for="star-4" title="Оценка «4»"></label>
+              |     <input required type="radio" id="star-3" name="rating" value="3">
+              |     <label for="star-3" title="Оценка «3»"></label>
+              |     <input required type="radio" id="star-2" name="rating" value="2">
+              |     <label for="star-2" title="Оценка «2»"></label>
+              |     <input required type="radio" id="star-1" name="rating" value="1">
+              |     <label for="star-1" title="Оценка «1»"></label>
+              | </div>

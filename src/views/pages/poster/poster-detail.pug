@@ -19,12 +19,28 @@ block content
     .container
       .container-page.poster--container
         .poster-detail
-          .poster-detail__img
-            img(src="../assets/images/poster-detail.jpg")
-          .poster-detail__price 340 ₽
-          .poster-detail__text
-            p 
-              | NEW! Шоу-программа «Dancing Queen» - танцевальное шоу с эффектными костюмами и оригинальной хореографией и мировые хиты королев современной поп музыки. Начало программы в 20:30. После шоу дискотека, работает DJ с популярной танцевальной музыкой.
+          .poster-detail__wrapper-slider
+            .poster-detail__slider
+              .poster-detail__slider-container
+                .slide-poster(style="background-image: url('../assets/images/news-detail.jpg')")
+                .slide-poster(style="background-image: url('../assets/images/poster-detail.jpg')")
+                .slide-poster(style="background-image: url('../assets/images/news-detail.jpg')")
+                .slide-poster(style="background-image: url('../assets/images/poster-detail.jpg')")
+                .slide-poster(style="background-image: url('../assets/images/news-detail.jpg')")
+              .poster-detail__slider-cnt
+              .poster-detail__info
+                .poster-detail__price 340 ₽
+                .poster-detail__text
+                  p 
+                    | NEW! Шоу-программа «Dancing Queen» - танцевальное шоу с эффектными костюмами и оригинальной хореографией и мировые хиты королев современной поп музыки. Начало программы в 20:30. После шоу дискотека, работает DJ с популярной танцевальной музыкой.
+
+            .poster-detail__slider-vertical
+              img(src="../assets/images/poster-detail.jpg")
+              img(src="../assets/images/news-detail.jpg")
+              img(src="../assets/images/poster-detail.jpg")
+              img(src="../assets/images/poster-detail.jpg")
+              img(src="../assets/images/poster-detail.jpg")
+        
         .poster__show-more-list
           h2.page-h1 Другие шоу-программы
           .poster__list

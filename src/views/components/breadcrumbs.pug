@@ -6,6 +6,6 @@ mixin breadcrumbs(name, link)
           span(itemprop="name") Главная
           meta(itemprop="position" content="1")
       li(itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem")
-        a.breadcrumbs-item(itemprop="item" href=link title=name)
+        span.breadcrumbs-item(itemprop="item" title=name)
           span(itemprop="name")= name
           meta(itemprop="position" content="2")

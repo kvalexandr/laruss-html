@@ -10,6 +10,10 @@
 	display: inline-block;
 	text-decoration: none;
 
+	&--grey {
+		border-color: #C4C4C4;
+	}
+
 	&::after {
 		content: "";
 		position: absolute;
@@ -24,7 +28,7 @@
 }
 
 .btn-big {
-	padding: 13px 58px;
+	padding: 12px 60px;
 	font-size: 14px;
 
 	&::after {

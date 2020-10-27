@@ -15,14 +15,14 @@ block content
         .top-slider__item.swiper-slide(style="background: url('assets/images/slide3.jpg'); filter: brightness(50%);")
     .top-slider-content
       .top-slider-content__item.side-slider
-          .top-slider-content__lp.lp-slider(style="background: url('assets/images/lp-in-slide.jpg');")
+          a.top-slider-content__lp.lp-slider(href="#" style="background: url('assets/images/lp-in-slide.jpg');")
             .lp-slider__title Банкет
       .top-slider-content__item.content-slider
         .content-slider__title LA RUSS<br>РЕСТОРАН & ШОУ
         .content-slider__kitchen Современная русская кухня
         .content-slider__address СПБ, НАБ. РЕКИ МОЙКИ, 37
       .top-slider-content__item.side-slider
-          .top-slider-content__poster.poster-slider(style="background: url('assets/images/poster-in-slide.jpg');")
+          a.top-slider-content__poster.poster-slider(href="#" style="background: url('assets/images/poster-in-slide.jpg');")
             .poster-slider__title Афиша
             .poster-slider__anons 
               .poster-slider__date Сегодня<br>пятница, 20:30
@@ -40,26 +40,26 @@ block content
         .poster-anons
           .poster-anons__title Афиша
           .poster-anons__block
-            .poster-anons__img
+            a(href="#").poster-anons__img
               img(src="assets/images/main1.jpg")
             .poster-anons__info
               .poster-anons__date 15 января, Среда — 20:30
-              .poster-anons__description Шоу-программа «Russian style»
+              a(href="#").poster-anons__description Шоу-программа «Russian style»
         .poster-anons
           .poster-anons__title Акции
           .poster-anons__block
-            .poster-anons__img
+            a(href="#").poster-anons__img
               img(src="assets/images/main2.jpg")
             .poster-anons__info
               .poster-anons__date 24 июля
-              .poster-anons__description.poster-anons__description--big Летняя терраса на дворцовой площади
+              a(href="#").poster-anons__description.poster-anons__description--big Летняя терраса на дворцовой площади
         .poster-anons
           .poster-anons__title Проведите у нас
           .poster-anons__block
-            .poster-anons__img
+            a(href="#").poster-anons__img
               img(src="assets/images/main1.jpg")
             .poster-anons__info
-              .poster-anons__description Новогодние корпаративы
+              a(href="#").poster-anons__description Новогодние корпаративы
               .poster-anons__price от 3500 руб/чел.
 
   section.slider-lp-title
@@ -83,6 +83,8 @@ block content
           a.slider-lp__link.btn.btn-big(href="/lp") Свадьба
         .slider-lp__item
           a.slider-lp__link.btn.btn-big(href="/lp") Юбилей
+        .slider-lp__item
+          a.slider-lp__link.btn.btn-big(href="/lp") Новогодние корпоративы
 
   section.main-page
     .container
@@ -167,7 +169,7 @@ block content
               p
                 | Все описанные выше моменты создают удивительное настроение, которое передается всем гостям заведения. К преимуществам ресторана также можно отнести:
               
-              ul
+              ol
                 li команду профессиональных официантов, барменов и администраторов;
                 li два зала – основной и VIP – на 60 и 10 персон;
                 li объемную и разнообразную барную карту;

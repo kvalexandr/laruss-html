@@ -18,15 +18,15 @@ block content
     .container
       .container-page
         .filter-btn
-          button.btn.btn-big Интерьер
-          button.btn.btn-big Еда
-          button.btn.btn-big Шоу-программа
+          a.scroll(href="#inerior").btn.btn-big Интерьер
+          a.scroll(href="#food").btn.btn-big Еда
+          a.scroll(href="#show").btn.btn-big Шоу-программа
 
   section.gallery
     .container
       .container-page.gallery--container
         .gallery-block
-          h2.page-h2 Интерьер
+          h2.page-h2#inerior Интерьер
           .gallery__list
             a.gallery__item(data-fancybox="images" href="assets/images/poster-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
             a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
@@ -37,7 +37,7 @@ block content
             a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
             a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
         .gallery-block
-          h2.page-h2 Еда
+          h2.page-h2#food Еда
           .gallery__list
             a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
             a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery2.jpg')")
@@ -48,7 +48,7 @@ block content
             a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery3.jpg')")
             a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
         .gallery-block
-          h2.page-h2 Шоу-программа
+          h2.page-h2#show Шоу-программа
           .gallery__list
             a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
             a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery2.jpg')")

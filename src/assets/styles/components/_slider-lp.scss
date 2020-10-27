@@ -1,0 +1,53 @@
+.slider-lp-title {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+.slider-lp {
+  margin-top: 12px;
+  padding: 0 45px;
+
+  @media screen and(max-width:  $width-768) {
+    padding: 0;
+    margin-right: -15px;
+    margin-left: -5px;
+  }
+
+  &__item {
+    padding: 0 5px;
+    display: block;
+
+    .btn {
+      border-color: #C4C4C4;
+    }
+  }
+
+  &__link {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 12px;
+    min-width: 200px;
+
+    @media screen and(max-width:  $width-768) {
+      width: auto;
+      padding: 12px 16px;
+    }
+  }
+
+  .btn-slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &-prev {
+      left: 0;
+    }
+
+    &-next {
+      right: 0;
+    }
+  }
+
+}

@@ -24,7 +24,6 @@
 		text-decoration: none;
 		font-weight: 600;
 		font-size: 16px;
-		max-width: 105px;
 		text-align: center;
 
 		@media screen and(max-width:  $width-411) {
@@ -50,6 +49,7 @@
 
 	&-list {
 		margin-top: 40px;
+		display: none;
 	}
 
 	&-item {
@@ -116,5 +116,10 @@
 		line-height: 16px;
 		text-align: right;
 		color: #9C9987;
+		margin-top: 10px;
 	}
+}
+
+.show-review {
+	display: block;
 }

@@ -19,19 +19,25 @@ block content
     .container
       .container-page.poster--container
         .poster__nav
-          a.poster__nav-link.poster__nav-prev(href="#") Предыдущая неделя
+          a.poster__nav-link.poster__nav-prev.poster__list-end(href="#") Предыдущая неделя
           a.poster__nav-link.poster__nav-next(href="#") Следующая неделя
-        .poster__list
-          +poster-item('Шоу-программа с Ксюшей Арсеньевой и Ко')(class="poster__item--wide")
-          +poster-item('Шоу-программа «Russian style»')
-          +poster-item('Шоу-программа с Ксюшей Арсеньевой и Ко')
-          +poster-item('Шоу-программа «Russian style»')
-          +poster-item('Шоу-программа с Ксюшей Арсеньевой и Ко')
+        .poster__list.poster__list-slider
+          .poster__list-slide
+            +poster-item('Шоу-программа с Ксюшей Арсеньевой и Ко')(class="poster__item--wide")
+            +poster-item('Шоу-программа «Russian style»')
+            +poster-item('Шоу-программа «Russian style»')
+          .poster__list-slide
+            +poster-item('Шоу-программа с Ксюшей Арсеньевой и Ко')(class="poster__item--wide")
+            +poster-item('Шоу-программа «Russian style»')
+            +poster-item('Шоу-программа «Russian style»')
+            +poster-item('Шоу-программа «Russian style»')
+          .poster__list-slide
+            +poster-item('Шоу-программа с Ксюшей Арсеньевой и Ко')(class="poster__item--wide")
 
         .poster__show-more
-          button.show-more.btn.btn-big Все шоу
+          button.show-more-poster.btn.btn-big Все шоу
 
-        .poster__show-more-list
+        .poster__list-show-more
           h2.page-h1 Все шоу
           .poster__list
             +poster-item('Шоу-программа «Russian style»')

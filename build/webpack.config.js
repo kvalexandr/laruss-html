@@ -22,7 +22,7 @@ module.exports = env => {
     output: {
       path: path.resolve(__dirname, '../dist'),
       publicPath: '/',
-      filename: 'assets/js/[name].[hash:7].bundle.js'
+      filename: env === 'development' ? 'assets/js/[name].[hash:7].bundle.js' : 'assets/js/[name].js'
     },
     devServer: {
       contentBase: path.resolve(__dirname, '../src'),
@@ -87,7 +87,7 @@ module.exports = env => {
           loader: 'url-loader',
           options: {
             limit: 3000,
-            name: 'assets/images/[name].[hash:7].[ext]'
+            name: 'assets/images/[name].[ext]'
           }
         },
         {
@@ -95,7 +95,7 @@ module.exports = env => {
           loader: 'url-loader',
           options: {
             limit: 10000,
-            name: 'assets/videos/[name].[hash:7].[ext]'
+            name: 'assets/videos/[name].[ext]'
           }
         }
       ]
@@ -114,7 +114,7 @@ module.exports = env => {
           vendors: false,
           // vendor chunk
           vendor: {
-            filename: 'assets/js/vendor.[hash:7].bundle.js',
+            filename: env === 'development' ? 'assets/js/vendor.[hash:7].bundle.js' : 'assets/js/vendor.js',
             // sync + async chunks
             chunks: 'all',
             // import file path containing node_modules
@@ -131,7 +131,7 @@ module.exports = env => {
         { from: 'assets/images/', to: 'assets/images/' },
       ]),
       new MiniCssExtractPlugin({
-        filename: 'assets/css/[name].[hash:7].bundle.css',
+        filename: env === 'development' ? 'assets/css/[name].[hash:7].bundle.css' : 'assets/css/[name].css',
         chunkFilename: '[id].css',
       }),
 
