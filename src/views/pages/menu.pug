@@ -29,37 +29,120 @@ block content
       .container-page
         .rmenu--container
           .rmenu-side
-            .rmenu-side__item
-              .rmenu-side__icon
-                img(src="assets/images/icons/menu-side-food.svg")
-              .rmenu-side__hello Дорогие гости!
-              .rmenu-side__titles
-                a.rmenu-side__title(href="#") ХОЛОДНЫЕ ЗАКУСКИ / Cold starters
-                a.rmenu-side__title(href="#") АССОРТИ / Assorted
-                a.rmenu-side__title(href="#") САЛАТЫ / Salads
-                a.rmenu-side__title(href="#") ГОРЯЧИЕ ЗАКУСКИ / Hot starters
-                a.rmenu-side__title(href="#") ПИРОЖКИ / Pies
-                a.rmenu-side__title(href="#") СУПЫ / Soups
-                a.rmenu-side__title(href="#") БЛЮДА ИЗ РЫБЫ И МОРЕПРОДУКТОВ / Main course fish and sea-foods
-                a.rmenu-side__title(href="#") БЛЮДА ИЗ МЯСА / Main course meat
-                a.rmenu-side__title(href="#") ХЛЕБ / Bread
-                a.rmenu-side__title(href="#") ДЕСЕРТЫ / Desserts
-            .rmenu-side__item
-              .rmenu-side__icon
-                img(src="assets/images/icons/menu-side-wine.svg")
-              .rmenu-side__titles
-                a.rmenu-side__title(href="#") ШАМПАНСКОЕ И ИГРИСТЫЕ ВИНА
-                a.rmenu-side__title(href="#") ВИНА ПО БОКАЛАМ
-                a.rmenu-side__title(href="#") БЕЛЫЕ ВИНА
-                a.rmenu-side__title(href="#") РОЗОВЫЕ ВИНА
-                a.rmenu-side__title(href="#") КРАСНЫЕ ВИНА
-                a.rmenu-side__title(href="#") ПОРТВЕЙН
-                a.rmenu-side__title(href="#") АПЕРИТИВЫ, ЛИКЁРЫ
-                a.rmenu-side__title(href="#") ВОДКА, НАСТОЙКИ
-            .rmenu-side__tools
-              a.rmenu-side__print.rmenu-side__tools-link(href="#") Распечатать меню
-              a.rmenu-side__kitchen.rmenu-side__tools-link(href="#") О руской кухне
-              a.rmenu-side__download.rmenu-side__tools-link(href="#") Скачать договор
-
-          .rmenu-main
-            h2 Холодные закуски
+            .rmenu-side-sticky
+              .rmenu-side__item
+                .rmenu-side__icon
+                  img(src="assets/images/icons/menu-side-food.svg")
+                .rmenu-side__hello Дорогие гости!
+                .rmenu-side__titles
+                  a.rmenu-side__title(href="#") ХОЛОДНЫЕ ЗАКУСКИ / Cold starters
+                  a.rmenu-side__title(href="#") АССОРТИ / Assorted
+                  a.rmenu-side__title(href="#") САЛАТЫ / Salads
+                  a.rmenu-side__title(href="#") ГОРЯЧИЕ ЗАКУСКИ / Hot starters
+                  a.rmenu-side__title(href="#") ПИРОЖКИ / Pies
+                  a.rmenu-side__title(href="#") СУПЫ / Soups
+                  a.rmenu-side__title(href="#") БЛЮДА ИЗ РЫБЫ И МОРЕПРОДУКТОВ / Main course fish and sea-foods
+                  a.rmenu-side__title(href="#") БЛЮДА ИЗ МЯСА / Main course meat
+                  a.rmenu-side__title(href="#") ХЛЕБ / Bread
+                  a.rmenu-side__title(href="#") ДЕСЕРТЫ / Desserts
+              .rmenu-side__item
+                .rmenu-side__icon
+                  img(src="assets/images/icons/menu-side-wine.svg")
+                .rmenu-side__titles
+                  a.rmenu-side__title(href="#") ШАМПАНСКОЕ И ИГРИСТЫЕ ВИНА
+                  a.rmenu-side__title(href="#") ВИНА ПО БОКАЛАМ
+                  a.rmenu-side__title(href="#") БЕЛЫЕ ВИНА
+                  a.rmenu-side__title(href="#") РОЗОВЫЕ ВИНА
+                  a.rmenu-side__title(href="#") КРАСНЫЕ ВИНА
+                  a.rmenu-side__title(href="#") ПОРТВЕЙН
+                  a.rmenu-side__title(href="#") АПЕРИТИВЫ, ЛИКЁРЫ
+                  a.rmenu-side__title(href="#") ВОДКА, НАСТОЙКИ
+              .rmenu-side__tools
+                a.rmenu-side__print.rmenu-side__tools-link(href="#" onClick="javascript:CallPrint('print-content');") Распечатать меню
+                a.rmenu-side__kitchen.rmenu-side__tools-link(href="#") О руской кухне
+                a.rmenu-side__download.rmenu-side__tools-link(href="#") Скачать договор
+          .rmenu-main-section#print-content
+            .rmenu-main.rmenu-main--divide#menu-23
+              h2.rmenu-main__title ХОЛОДНЫЕ ЗАКУСКИ / COLD STARTERS
+              .rmenu-main__items
+                .rmenu-main__item
+                  .rmenu-main__name-price
+                    .rmenu-main__name-section
+                      .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                      .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                    .rmenu-main__price 350 ₽
+                .rmenu-main__item
+                  .rmenu-main__name-price
+                    .rmenu-main__name-section
+                      .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                      .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                    .rmenu-main__price 350 ₽
+                .rmenu-main__item
+                 .rmenu-main__name-price
+                  .rmenu-main__name-section
+                    .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                    .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                  .rmenu-main__price 350 ₽
+            .rmenu-main.rmenu-main--divide#menu-24
+              h2.rmenu-main__title ХОЛОДНЫЕ ЗАКУСКИ / COLD STARTERS
+              .rmenu-main__items
+                .rmenu-main__item
+                  .rmenu-main__name-price
+                    .rmenu-main__name-section
+                      .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                      .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                    .rmenu-main__price 350 ₽
+                .rmenu-main__item
+                  .rmenu-main__name-price
+                    .rmenu-main__name-section
+                      .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                      .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                    .rmenu-main__price 350 ₽
+                .rmenu-main__item
+                 .rmenu-main__name-price
+                  .rmenu-main__name-section
+                    .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                    .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                  .rmenu-main__price 350 ₽
+            .rmenu-main.rmenu-main--divide#menu-24
+              h2.rmenu-main__title ХОЛОДНЫЕ ЗАКУСКИ / COLD STARTERS
+              .rmenu-main__items
+                .rmenu-main__item
+                  .rmenu-main__name-price
+                    .rmenu-main__name-section
+                      .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                      .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                    .rmenu-main__price 350 ₽
+                .rmenu-main__item
+                  .rmenu-main__name-price
+                    .rmenu-main__name-section
+                      .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                      .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                    .rmenu-main__price 350 ₽
+                .rmenu-main__item
+                 .rmenu-main__name-price
+                  .rmenu-main__name-section
+                    .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                    .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                  .rmenu-main__price 350 ₽
+            .rmenu-main.rmenu-main--divide#menu-24
+              h2.rmenu-main__title ХОЛОДНЫЕ ЗАКУСКИ / COLD STARTERS
+              .rmenu-main__items
+                .rmenu-main__item
+                  .rmenu-main__name-price
+                    .rmenu-main__name-section
+                      .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                      .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                    .rmenu-main__price 350 ₽
+                .rmenu-main__item
+                  .rmenu-main__name-price
+                    .rmenu-main__name-section
+                      .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                      .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                    .rmenu-main__price 350 ₽
+                .rmenu-main__item
+                 .rmenu-main__name-price
+                  .rmenu-main__name-section
+                    .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                    .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                  .rmenu-main__price 350 ₽

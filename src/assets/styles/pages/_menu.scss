@@ -16,6 +16,11 @@
 			display: none;
 		}
 
+		&-sticky {
+			position: sticky;
+			top: 20px;
+		}
+
 		&__item {
 			margin-bottom: 40px;
 		}
@@ -83,7 +88,7 @@
 	&-main	{
 		flex: 1 0 auto;
 		background-color: #F6F2EE;
-		padding: 64px;
+		padding: 40px;
 
 		@media screen and(max-width:  $width-768) {
 			margin-right: -15px;
@@ -92,6 +97,108 @@
 
 		@media screen and(max-width:  $width-1024) {
 			padding: 40px 15px;
+		}
+
+		&__title {
+			position: relative;
+			padding-right: 60px;
+
+			@media screen and(max-width:  $width-768) {
+				&::after {
+					content: '';
+					width: 35px;
+					height: 35px;
+					border: 1px solid rgba(47, 47, 47, 0.4);
+					position: absolute;
+					right: 15px;
+					top: 50%;
+					transform: translate(0, -50%);
+					background: url('../images/icons/arrow-lp-down.svg') no-repeat;
+					background-position: center center;
+				}
+			
+				&.active::after {
+					background: url('../images/icons/arrow-lp-up.svg') no-repeat;
+					background-position: center center;
+				}
+			}
+		}
+
+		&-section {
+			width: 100%;
+		}
+
+		&--divide {
+			margin-bottom: 20px;
+		}
+
+		&__description {
+				margin-top: 30px;
+		}
+
+		&--two-col {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				width: 100%;
+		}
+
+		&--two-col div {
+				width: 50%;
+				flex: 0 0 auto;
+
+				@media screen and(max-width:  $width-768) {
+					width: 100%;
+				}
+		}
+
+		&__subsection {
+				margin: 10px 0;
+				font-size: 14px;
+				line-height: 19px;
+				font-weight: bold;
+		}
+
+		&__items {
+			margin-top: 20px;
+			display: block;
+			
+			@media screen and(max-width:  $width-768) {
+				display: none;
+			}
+		}
+
+		&__item {
+				margin: 10px 0;
+				color: #2F2F2F;
+				font-size: 14px;
+		}
+
+		&__caps {
+				text-transform: uppercase;
+				font-weight: 600;
+		}
+
+		&__curs {
+				font-style: italic;
+				font-size: 12px;
+				color: #828282;
+				margin-bottom: 4px;
+		}
+
+		&__name-price {
+				display: flex;
+				justify-content: space-between;
+		}
+
+		&__name-section {
+				flex: 1 1 auto;
+		}
+
+		&__price {
+				font-weight: 600;
+				flex: 0 0 60px;
+				text-align: right;
 		}
 
 		h2 {
