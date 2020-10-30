@@ -244,8 +244,10 @@
   &__title-icon {
     margin-bottom: 6px;
 
-    @media screen and(max-width:  $width-768) {
-      display: none;
+    &.hide-mobile {
+      @media screen and(max-width:  $width-768) {
+        display: none;
+      }
     }
   }
 
@@ -256,6 +258,10 @@
     @media screen and(max-width:  $width-768) {
       text-align: left;
       margin-bottom: 30px;
+    }
+
+    p {
+      text-align: justify;
     }
   }
 }
