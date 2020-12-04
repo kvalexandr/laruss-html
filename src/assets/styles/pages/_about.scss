@@ -64,14 +64,11 @@
 		}
 
 		&__icon {
-			width: 40px;
-			height: 40px;
 			margin-right: 16px;
-			background: url('../images/icons/receipt.svg') no-repeat;
 		}
 
 		&__info {
-			max-width: 220px;
+			display: flex;
 		}
 
 		&__title {
@@ -94,8 +91,7 @@
 		}
 
 		&__day {
-			font-weight: 600;
-			width: 60px;
+			margin-right: 10px;
 		}
 	}
 }

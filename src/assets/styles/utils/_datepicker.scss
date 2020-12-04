@@ -157,7 +157,7 @@
   position: absolute;
   right: 0;
   background: none;
-  color: #000
+  color: #000;
 }
 
 .xdsoft_datetimepicker .xdsoft_next:after {
@@ -189,7 +189,8 @@
   width: 30px;
   display: block;
   margin-left: 14px;
-  margin-top: 7px
+  margin-top: 7px;
+  display: none;
 }
 
 .xdsoft_datetimepicker.xdsoft_rtl .xdsoft_timepicker .xdsoft_prev, .xdsoft_datetimepicker.xdsoft_rtl .xdsoft_timepicker .xdsoft_next {
@@ -201,7 +202,8 @@
 .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_prev {
   background-position: -40px 0;
   margin-bottom: 7px;
-  margin-top: 0
+  margin-top: 0;
+  display: none;
 }
 
 .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box {
@@ -589,4 +591,29 @@
 
 .xdsoft_datetimepicker .xdsoft_today_button {
   display: none
+}
+
+
+.xdsoft_disabled {
+  position: relative;
+  z-index: 100;
+}
+
+.date-disabled-msg {
+  display: none;
+}
+
+#date-disabled-msg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 10000;
+  width: 200px;
+  padding: 10px;
+  text-align: left;
+  background-color: #ccc;
+  color: #333;
+  border: 1px solid #333;
+  opacity: 1 !important;
 }

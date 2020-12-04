@@ -8,16 +8,46 @@ import '@fancyapps/fancybox';
 import 'slick-carousel';
 import 'jquery-datetimepicker/build/jquery.datetimepicker.full.min';
 import 'jquery.maskedinput/src/jquery.maskedinput';
+import SimpleBar from 'simplebar';
 
 import 'scripts/ymaps';
 import 'scripts/sliders';
 
 $(document).ready(() => {
 
+  const menuMobile = document.querySelector('.menu_mobile-scroll');
+  if (menuMobile) {
+    new SimpleBar(menuMobile, { autoHide: false });
+  }
+
   $.datetimepicker.setLocale('ru');
   $('.datetimepicker').datetimepicker({
-    format: 'd.m.Y',
-    timepicker: false
+    format: 'd.m.Y H:i',
+    formatDate: 'd.m.Y',
+    timepicker: true,
+    daysOfWeekDisabled: [0, 6],
+    disabledDates: disabledDates,
+    onGenerate: function (ct) {
+      jQuery(this).find('.xdsoft_disabled').on('mouseenter', function (e) {
+        e.preventDefault();
+        // const dateMsg = $(".date-disabled-msg").html();
+
+        // const dateMsg = document.createElement('div');
+        // dateMsg.setAttribute('id', 'date-disabled-msg');
+        // dateMsg.innerHTML = 'Бронирование на эту дату осуществляется по телефону +7 (812) 571-75-91';
+
+        // dateMsg.addEventListener('mouseleave', function (e) {
+        //   this.remove();
+        // });
+
+        // $(this).append(dateMsg);
+      });
+
+      // jQuery(this).find('.xdsoft_disabled').on('mouseleave', function (e) {
+      //   e.preventDefault();
+      //   $(this).find("#date-disabled-msg").remove();;
+      // });
+    },
   });
 
   $('.phone').mask('+7(999)999-99-99');
@@ -29,6 +59,7 @@ $(document).ready(() => {
 
   $('.mobile-menu__btn').on('click', function (e) {
     $('.mobile-menu__container').slideToggle();
+    $('body').toggleClass('open-menu');
   });
 
   $('.lp-page-title-mobile').on('click', function (e) {
@@ -38,7 +69,7 @@ $(document).ready(() => {
 
   $('.rmenu-main__title').on('click', function (e) {
     if (document.querySelector("body").offsetWidth < 768) {
-      $(this).parent().find('.rmenu-main__items').slideToggle();
+      $(this).parent().find('.rmenu-main__items-container').slideToggle();
       $(this).toggleClass('active');
     }
   });
@@ -56,14 +87,38 @@ $(document).ready(() => {
     $("#video").attr('src', videoSrc);
   });
 
+
+  $('[data-fancybox-iframe]').fancybox({
+    toolbar: false,
+    smallBtn: true,
+    iframe: {
+      preload: false
+    }
+  });
+
+  $('[data-fancybox]').fancybox({
+    loop: true
+  });
+
   $('a.scroll[href^="#"]').on('click', function () {
     var _href = $(this).attr('href');
-    $('html, body').animate({ scrollTop: $(_href).offset().top + 'px' });
+    const screenWidth = window.screen.width;
+    let offsetTop = $(_href).offset().top - 10;
+    if (screenWidth < 1024) offsetTop -= 120;
+    $('html, body').animate({ scrollTop: offsetTop + 'px' });
     return false;
   });
 
   $('.show-more-poster').on('click', function (e) {
-    $('.poster__list-show-more').slideToggle();
+    $('.poster__list-show-more').slideToggle('fast', function () {
+      if ($('.poster__list-show-more').css('display') === 'block') {
+        console.log($('.show-more-poster').data('btn-hide'));
+        $('.show-more-poster').text($('.show-more-poster').data('btn-hide'));
+      } else {
+        $('.show-more-poster').text($('.show-more-poster').data('btn-show'));
+      }
+    });
+
   });
 
   $('.show-review').on('click', function (e) {
@@ -154,33 +209,41 @@ $(document).ready(() => {
     });
   }
 
-  const reserveForm = document.querySelector('.form-send-reserve');
-  const reserveBtn = document.querySelector('.btn-send-reserve');
-  if (reserveForm) {
-    reserveForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const successText = reserveForm.querySelector('.success-text__form').textContent;
-      const data = new FormData(reserveForm);
-      reserveBtn.disabled = true;
-      postData('/local/ajax/reserve.php', {
-        body: data
-      }).then(function (data) {
-        reserveBtn.disabled = false;
-        if (data.status) {
-          $('#reserve').modal('hide');
-          $('#success-form').find('.success-text').text(successText);
-          $('#success-form').modal('show');
+  const reserveForms = document.querySelectorAll('.form-send-reserve');
+  // const reserveBtn = document.querySelector('.btn-send-reserve');
+  for (const reserveForm of reserveForms) {
+    if (reserveForm) {
+      reserveForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const successText = reserveForm.querySelector('.success-text__form').innerHTML;
+        const data = new FormData(reserveForm);
+        // reserveBtn.disabled = true;
+        postData('/local/ajax/reserve.php', {
+          body: data
+        }).then(function (data) {
+          // reserveBtn.disabled = false;
+          if (data.status) {
+            $('#reserve').modal('hide');
+            $('#success-form').find('.success-text').html(successText);
+            $('#success-form').modal('show');
 
-          // if (data.form_type === 'services') {
-          //   window.dataLayer.push({ 'event': 'form-success' });
-          // }
+            if (data.form_type === 'RESERV_POPUP') {
+              ym(data.metric, 'reachGoal', 'zakaz-stol');
+              ga('send', 'event', 'zakaz', 'click', 'stol');
+            }
 
-        } else {
-          alert('Ошбика при отправке!');
-        }
-        reserveForm.reset();
+            if (data.form_type === 'LP') {
+              ym(data.metric, 'reachGoal', 'zakaz-banket');
+              ga('send', 'event', 'zakaz', 'click', ' banket');
+            }
+
+          } else {
+            alert('Ошбика при отправке!');
+          }
+          reserveForm.reset();
+        });
       });
-    });
+    }
   }
 
   const reviewForm = document.querySelector('.form-send-review');
@@ -211,6 +274,8 @@ $(document).ready(() => {
       });
     });
   }
+
+
 
 });
 

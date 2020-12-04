@@ -27,39 +27,55 @@ block content
         h1.main-h1 Ресторан для корпоратива LARUSS
         p
           | Ресторан для корпоратива LARUSS расположен в цент ре Санкт-Петербурга — на Дворцовой площади. Стильное заведение быстро стало популярным балгодаря вкусной кухне и теплой атмосфере. 
-      
+        p
+          .lp-inset
+            a.lp-inset__item(href="#")
+              .lp-inset__item-in
+                .lp-inset__img
+                  img(src="assets/images/lp-inset.png")
+                .lp-inset__info
+                  .lp-inset__title Маленькая свадьба
+                  .lp-inset__description от 10 до 20 человек
+            a.lp-inset__item(href="#")
+              .lp-inset__item-in
+                .lp-inset__img
+                  img(src="assets/images/lp-inset.png")
+                .lp-inset__info
+                  .lp-inset__title Большая свадьба
+                  .lp-inset__description от 20 до 50 человек
+
   section.spec
     .container
       .main-page--container
-        .spec-list
-          .spec-list__item
+        ul.spec-list
+          li.spec-list__item
             .spec-list__item-title Местоположение
             .spec-list__item-description наб. реки Мойки, 37, на углу Дворцовой площади, м.Гостиный Двор, м.Невский проспект, м.Адмиралтейская
-          .spec-list__item
+          li.spec-list__item
             .spec-list__item-title Вместимость
             .spec-list__item-description Банкет до 60 персон<br>Фуршет до 70 персон
-          .spec-list__item
+          li.spec-list__item
             .spec-list__item-title Залы
             .spec-list__item-description 	2 зала на 60 и на 10 персон
-          .spec-list__item
+          li.spec-list__item
             .spec-list__item-title Кухня
             .spec-list__item-description Современная русская
-          .spec-list__item
+          li.spec-list__item
             .spec-list__item-title Варианты меню и стоимость
             .spec-list__item-description По меню ресторана или по готовым банкетным меню, стоимостью от 1900 руб./чел.
-          .spec-list__item
+          li.spec-list__item
             .spec-list__item-title Развлекательная программа
             .spec-list__item-description Шоу программа – живой вокал и шоу-балет со среды по воскресенье. После шоу дискотека, работает DJ с популярной танцевальной музыкой
-          .spec-list__item
+          li.spec-list__item
             .spec-list__item-title Танцпол
             .spec-list__item-description Есть
-          .spec-list__item
+          li.spec-list__item
             .spec-list__item-title Интерьер
             .spec-list__item-description Наш интерьер выполнен в современном классическом стиле
-          .spec-list__item
+          li.spec-list__item
             .spec-list__item-title Дополнительно
             .spec-list__item-description Рядом 3 центральных причала<br>Украшение зала шарами
-          .spec-list__item
+          li.spec-list__item
             .spec-list__item-title Время работы
             .spec-list__item-description До 00.00/01.00 с возможностью продления
 
@@ -83,7 +99,7 @@ block content
                   a(href="#")
                     .menu-block__info-number 1900
                     .menu-block__info-cur руб./гость
-                  span.menu-block__info-link Смотреть
+                  a.menu-block__info-link.btn-modal-menu(data-fancybox-iframe data-type="iframe" data-src="http://localhost:8080/menu?iframe=y" href="javascript:;") Смотреть
                 li
                   a(href="#")
                     .menu-block__info-number 2550

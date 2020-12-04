@@ -87,17 +87,19 @@
 			line-height: 22px;
 			color: #2F2F2F;
 			margin-top: 17px;
+			text-transform: uppercase;
 		}
 
 		&__date {
 			font-style: italic;
 			font-size: 15px;
-			line-height: 2;
 			color: #828282;
+			margin-top: 10px;
 		}
 
 		&__anons {
 			color: #2F2F2F;
+			margin-top: 10px;
 		}
 	}
 
@@ -107,6 +109,10 @@
 			font-size: 15px;
 			line-height: 2;
 			color: #828282;
+		}
+
+		img {
+			width: 100%;
 		}
 	}
 }

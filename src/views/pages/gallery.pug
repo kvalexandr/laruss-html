@@ -28,14 +28,14 @@ block content
         .gallery-block
           h2.page-h2#inerior Интерьер
           .gallery__list
-            a.gallery__item(data-fancybox="images" href="assets/images/poster-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
-            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
-            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
-            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
-            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
-            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
-            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
-            a.gallery__item(data-fancybox="images" href="assets/images/top-banner.jpg" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" data-src="#hidden-content-1" href="javascript:;" style="background-image: url('assets/images/gallery1.jpg')")
+            a.gallery__item(data-fancybox="images" data-src="#hidden-content-2" href="javascript:;" style="background-image: url('assets/images/gallery1.jpg')")
+            #hidden-content-1.hidden-fancybox
+              .hidden-fancybox-container
+                img(src="assets/images/top-banner.jpg")
+            #hidden-content-2.hidden-fancybox
+              .hidden-fancybox-container
+                img(src="assets/images/about-banner.jpg")
         .gallery-block
           h2.page-h2#food Еда
           .gallery__list

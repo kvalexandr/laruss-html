@@ -4,9 +4,15 @@
 	padding: 16px 0;
 	height: 120px;
 	flex: 0 0 auto;
+	background: #fff;
 
 	@media screen and(max-width:  $width-1024) {
-		height: 145px;
+		height: 105px;
+		position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
 	}
 	
 	&__container {
@@ -16,8 +22,12 @@
 
 	&__logo {
 		flex: 0;
+		display: flex;
+    align-items: center;
 
 		img {
+			max-width: 87px;
+			
 			@media screen and(max-width:  $width-1024) {
 				width: 48px;
 			}
@@ -136,11 +146,11 @@
 			&__sub {
 				display: none;
 				background: #fff;
-				z-index: 2;
+				z-index: 10;
 				position: absolute;
 				top: 100%;
 				left: 0;
-				min-width: 200px;
+				min-width: 250px;
 				padding: 20px;
 
 				&-item {
@@ -149,6 +159,7 @@
 
 				&-link {
 					text-decoration: none;
+					text-transform: uppercase;
 
 					&:hover {
 						opacity: .7;
@@ -169,15 +180,23 @@
 			width: 22px;
 			height: 15px;
 			display: inline-block;
+			border: 1px solid #acacac;
+			opacity: 0.5;
+
+			&:hover, &.active {
+				opacity: 1;
+			}
 		}
 
 		&--rus {
-			background: url('../images/icons/lang-rus.jpg');
+			background: url('../images/icons/lang-rus.png');
 			margin-left: 7px;
+			background-position: center;
 		}
 
 		&--eng {
-			background: url('../images/icons/lang-eng.jpg');
+			background: url('../images/icons/lang-eng.png');
+			background-position: center;
 		}
 	}
 
@@ -218,7 +237,7 @@
 		display: none;
 
 		@media screen and(max-width:  $width-1024) {
-			display: block;
+			display: none;
 		}
 	}
 
@@ -279,14 +298,16 @@
 .mobile-menu__container {
   position: absolute;
 	flex-direction: column;
-  top: 145px;
+  top: 105px;
   left: 0;
   right: 0;
   z-index: 999;
   display: none;
-  overflow: hidden;
+  overflow: scroll;
 	background-color: #fff;
 	border-top: 1px solid #F5F5F5;
+	height: 100vh;
+	padding-bottom: 160px;
 }
 .mobile-menu__list {
   transition: .5s;
@@ -351,6 +372,7 @@
 
 	&-link {
 		text-decoration: none;
+		text-transform: uppercase;
 		color: #2F2F2F;
 		font-size: 14px;
 		line-height: 1;

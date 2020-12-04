@@ -103,7 +103,7 @@
 }
 
 .form-cell {
-  border: 1px solid #6E6E6E;
+  border: 1px solid #ACACAC;
   padding: 0 10px;
   width: calc(50% - 5px);
   margin-right: 5px;
@@ -128,7 +128,7 @@
   }
 
   span {
-    color: #000;
+    color: #ACACAC;
     margin-right: 5px;
     font-size: 12px;
     font-weight: 600;
@@ -143,7 +143,7 @@
   }
 
   .input-w90 {
-    width: calc(100% - 95px);
+    width: calc(100% - 93px);
   }
 
   input {
@@ -187,10 +187,21 @@ button.close {
   padding: 90px 10px;
 }
 
-.success-text {
+.success__title {
+  font-size: 36px;
   font-weight: 600;
-  font-size: 21px;
-  line-height: 29px;
-  text-transform: uppercase;
-  color: #2f2f2f;
+}
+
+.success__subtitle {
+  font-size: 30px;
+}
+
+.success__info {
+  font-size: 20px;
+  color: #999;
+}
+
+.success hr {
+  border: 1px solid #999;
+  margin: 20px 0;
 }

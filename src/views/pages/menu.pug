@@ -8,7 +8,7 @@ block content
 
   //- Desktop page
   .slider-top-wrapper
-    .slider-top
+    .slider-top(data-speed="2000")
       .slide-top
         .slide-top-image(style="background-image: url('assets/images/slide-menu1.jpg')")
       .slide-top
@@ -62,87 +62,116 @@ block content
                 a.rmenu-side__kitchen.rmenu-side__tools-link(href="#") О руской кухне
                 a.rmenu-side__download.rmenu-side__tools-link(href="#") Скачать договор
           .rmenu-main-section#print-content
-            .rmenu-main.rmenu-main--divide#menu-23
-              h2.rmenu-main__title ХОЛОДНЫЕ ЗАКУСКИ / COLD STARTERS
-              .rmenu-main__items
-                .rmenu-main__item
+            .menu_mobile-scroll
+              a.menu_mobile-scroll__item(href="#") Основное меню
+              a.menu_mobile-scroll__item(href="#") Фуршетное меню
+              a.menu_mobile-scroll__item.active(href="#") Банкетное меню
+            .rmenu-main#menu-23
+              h2.rmenu-main__title.active ХОЛОДНЫЕ ЗАКУСКИ / COLD STARTERS
+              .rmenu-main__items-container
+                .rmenu-main__items
+                  .rmenu-main__subsection САЛАТЫ, ХОЛОДНЫЕ И ГОРЯЧИЕ ЗАКУСКИ:
+                  .rmenu-main__item
+                    .rmenu-main__name-price
+                      .rmenu-main__name-section
+                        .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                        .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                      .rmenu-main__price 350 ₽
+                  .rmenu-main__item
+                    .rmenu-main__name-price
+                      .rmenu-main__name-section
+                        .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                        .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                      .rmenu-main__price 350 ₽
+                  .rmenu-main__item
                   .rmenu-main__name-price
                     .rmenu-main__name-section
                       .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
                       .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
-                    .rmenu-main__price 350 ₽
-                .rmenu-main__item
-                  .rmenu-main__name-price
-                    .rmenu-main__name-section
-                      .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
-                      .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
-                    .rmenu-main__price 350 ₽
-                .rmenu-main__item
-                 .rmenu-main__name-price
-                  .rmenu-main__name-section
-                    .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
-                    .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
-                  .rmenu-main__price 350 ₽
+                    .rmenu-main__price 350 ₽<span>цена за 1 кг</span>
+                .rmenu-main__items
+                  .rmenu-main__subsection САЛАТЫ, ХОЛОДНЫЕ И ГОРЯЧИЕ ЗАКУСКИ:
+                  .rmenu-main__item
+                    .rmenu-main__name-price
+                      .rmenu-main__name-section
+                        .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                        .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                      .rmenu-main__price 350 ₽
+                  .rmenu-main__item
+                    .rmenu-main__name-price
+                      .rmenu-main__name-section
+                        .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                        .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                      .rmenu-main__price 350 ₽
+                  .rmenu-main__item
+                    .rmenu-main__name-price
+                      .rmenu-main__name-section
+                        .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                        .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                      .rmenu-main__price 350 ₽<span>цена за 1 кг</span>
             .rmenu-main.rmenu-main--divide#menu-24
               h2.rmenu-main__title ХОЛОДНЫЕ ЗАКУСКИ / COLD STARTERS
-              .rmenu-main__items
-                .rmenu-main__item
+              .rmenu-main__items-container.menu-hide
+                .rmenu-main__items
+                  .rmenu-main__item
+                    .rmenu-main__name-price
+                      .rmenu-main__name-section
+                        .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                        .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                      .rmenu-main__price 350 ₽
+                  .rmenu-main__item
+                    .rmenu-main__name-price
+                      .rmenu-main__name-section
+                        .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                        .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                      .rmenu-main__price 350 ₽
+                  .rmenu-main__item
                   .rmenu-main__name-price
                     .rmenu-main__name-section
                       .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
                       .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
                     .rmenu-main__price 350 ₽
-                .rmenu-main__item
-                  .rmenu-main__name-price
-                    .rmenu-main__name-section
-                      .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
-                      .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
-                    .rmenu-main__price 350 ₽
-                .rmenu-main__item
-                 .rmenu-main__name-price
-                  .rmenu-main__name-section
-                    .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
-                    .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
-                  .rmenu-main__price 350 ₽
             .rmenu-main.rmenu-main--divide#menu-24
               h2.rmenu-main__title ХОЛОДНЫЕ ЗАКУСКИ / COLD STARTERS
-              .rmenu-main__items
-                .rmenu-main__item
+              .rmenu-main__items-container.menu-hide
+                .rmenu-main__items
+                  .rmenu-main__item
+                    .rmenu-main__name-price
+                      .rmenu-main__name-section
+                        .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                        .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                      .rmenu-main__price 350 ₽
+                  .rmenu-main__item
+                    .rmenu-main__name-price
+                      .rmenu-main__name-section
+                        .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                        .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                      .rmenu-main__price 350 ₽
+                  .rmenu-main__item
                   .rmenu-main__name-price
                     .rmenu-main__name-section
                       .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
                       .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
                     .rmenu-main__price 350 ₽
-                .rmenu-main__item
-                  .rmenu-main__name-price
-                    .rmenu-main__name-section
-                      .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
-                      .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
-                    .rmenu-main__price 350 ₽
-                .rmenu-main__item
-                 .rmenu-main__name-price
-                  .rmenu-main__name-section
-                    .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
-                    .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
-                  .rmenu-main__price 350 ₽
             .rmenu-main.rmenu-main--divide#menu-24
               h2.rmenu-main__title ХОЛОДНЫЕ ЗАКУСКИ / COLD STARTERS
-              .rmenu-main__items
-                .rmenu-main__item
+              .rmenu-main__items-container.menu-hide
+                .rmenu-main__items
+                  .rmenu-main__item
+                    .rmenu-main__name-price
+                      .rmenu-main__name-section
+                        .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                        .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                      .rmenu-main__price 350 ₽
+                  .rmenu-main__item
+                    .rmenu-main__name-price
+                      .rmenu-main__name-section
+                        .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
+                        .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
+                      .rmenu-main__price 350 ₽
+                  .rmenu-main__item
                   .rmenu-main__name-price
                     .rmenu-main__name-section
                       .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
                       .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
                     .rmenu-main__price 350 ₽
-                .rmenu-main__item
-                  .rmenu-main__name-price
-                    .rmenu-main__name-section
-                      .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
-                      .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
-                    .rmenu-main__price 350 ₽
-                .rmenu-main__item
-                 .rmenu-main__name-price
-                  .rmenu-main__name-section
-                    .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
-                    .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
-                  .rmenu-main__price 350 ₽

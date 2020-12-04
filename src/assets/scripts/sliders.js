@@ -1,6 +1,15 @@
 $(document).ready(() => {
 
-  $('.top-slider-wrapper').slick({
+  const topSlider = $('.top-slider-wrapper');
+
+  topSlider.on('init', function (event, slick) {
+    topSlider.find('.slick-current').removeClass('slick-active').addClass('reset-animation');
+    setTimeout(function () {
+      topSlider.find('.slick-current').removeClass('reset-animation').addClass('slick-active');
+    }, 1);
+  });
+
+  topSlider.slick({
     dots: false,
     arrows: false,
     infinite: true,
@@ -10,7 +19,9 @@ $(document).ready(() => {
     autoplay: true,
     autoplaySpeed: 5000,
     fade: true,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    pauseOnHover: false,
+    useTransform: true
   });
 
   $('.slider-full').slick({
@@ -81,6 +92,11 @@ $(document).ready(() => {
   sliderPoster.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
     var i = (currentSlide ? currentSlide : 0) + 1;
     pages.text(i + ' из ' + slick.slideCount);
+
+    if (i === 1 || i === 2 || i === slick.slideCount) {
+      const iframeSrc = $(".slide-poster iframe").attr('data-src');
+      $(".slide-poster iframe").attr('src', iframeSrc);
+    }
   });
 
   sliderPoster.slick({
@@ -153,7 +169,10 @@ $(document).ready(() => {
     ]
   });
 
-  $('.slider-top').slick({
+  const topSliderSection = $('.slider-top');
+  const speedTopSliderSection = topSliderSection.attr('data-speed') || 2000;
+
+  topSliderSection.slick({
     dots: true,
     arrows: false,
     infinite: true,
@@ -161,10 +180,10 @@ $(document).ready(() => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
+    autoplay: true,
+    autoplaySpeed: speedTopSliderSection,
     dotsClass: 'slick-dots-square',
     variableWidth: true,
-    // nextArrow: '<button type="button" class="btn-slider btn-slider-next"><span></span></button>',
-    // prevArrow: '<button type="button" class="btn-slider btn-slider-prev"><span></span></button>',
     responsive: [
       {
         breakpoint: 1023,
@@ -176,11 +195,29 @@ $(document).ready(() => {
   });
 
   $('.top-btn-slider-next').on('click', function () {
-    $(".slider-top").slick('slickNext');
+    topSliderSection.slick('slickNext');
   });
 
   $('.top-btn-slider-prev').on('click', function () {
-    $(".slider-top").slick('slickPrev');
+    topSliderSection.slick('slickPrev');
+  });
+
+  $('.restaurant-fixed__items').slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 800,
+    variableWidth: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+    ]
   });
 
 });

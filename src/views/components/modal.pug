@@ -16,10 +16,10 @@
               .form-row
                 .form-cell.date
                   span Дата*
-                  input.input-w90.datetimepicker(autocomplete="off" type="text" name="date" readonly)
+                  input.input-w90.datetimepicker.form-control#datetimepicker(type="text" data-provide="datepicker")
                 .form-cell
                   span Кол-во гостей
-                  input.input-w90(autocomplete="off" class="phone" placeholder="до 65" type="text" name="phone")
+                  input.input-w90(autocomplete="off" class="phone" placeholder="" type="text" name="")
               .form-row
                 .form-cell
                   span Ваше имя*
@@ -47,6 +47,14 @@
           span(aria-hidden="true") &times;
         .embed-responsive.embed-responsive-16by9
           iframe.embed-responsive-item#video(src="" allowscriptaccess="always" allow="autoplay")
+
+#menu-modal.modal(style="display: none;")
+  .modal-dialog.modal-form
+    .modal-content
+      .modal-body
+        button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+        | <iframe id="menu-modal-content" src="" width="100%" height="500px"></iframe>
 
 #success-form.modal(style="display: none;")
   .modal-dialog.modal-form  

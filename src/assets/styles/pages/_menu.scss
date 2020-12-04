@@ -89,10 +89,12 @@
 		flex: 1 0 auto;
 		background-color: #F6F2EE;
 		padding: 40px;
+		margin-bottom: -60px;
 
 		@media screen and(max-width:  $width-768) {
 			margin-right: -15px;
 			margin-left: -15px;
+			margin-bottom: -30px;
 		}
 
 		@media screen and(max-width:  $width-1024) {
@@ -110,7 +112,7 @@
 					height: 35px;
 					border: 1px solid rgba(47, 47, 47, 0.4);
 					position: absolute;
-					right: 15px;
+					right: 5px;
 					top: 50%;
 					transform: translate(0, -50%);
 					background: url('../images/icons/arrow-lp-down.svg') no-repeat;
@@ -126,14 +128,16 @@
 
 		&-section {
 			width: 100%;
+			margin-bottom: 40px;
 		}
 
 		&--divide {
-			margin-bottom: 20px;
+			margin-bottom: 30px;
 		}
 
 		&__description {
 				margin-top: 30px;
+				text-transform: uppercase;
 		}
 
 		&--two-col {
@@ -157,19 +161,25 @@
 				font-size: 14px;
 				line-height: 19px;
 				font-weight: bold;
+				text-transform: uppercase;
 		}
 
 		&__items {
 			margin-top: 20px;
 			display: block;
-			
+		}
+
+		&__items-container {
+
 			@media screen and(max-width:  $width-768) {
-				display: none;
+				&.menu-hide {
+					display: none;
+				}
 			}
 		}
 
 		&__item {
-				margin: 10px 0;
+				margin: 16px 0;
 				color: #2F2F2F;
 				font-size: 14px;
 		}
@@ -184,6 +194,7 @@
 				font-size: 12px;
 				color: #828282;
 				margin-bottom: 4px;
+				word-break: break-word;
 		}
 
 		&__name-price {
@@ -196,9 +207,18 @@
 		}
 
 		&__price {
-				font-weight: 600;
-				flex: 0 0 60px;
-				text-align: right;
+			font-weight: 600;
+			flex: 0 0 100px;
+			text-align: right;
+			display: flex;
+			flex-direction: column;
+
+			span {
+				font-size: 10px;
+				color: #999;
+				font-style: italic;
+				font-weight: 400;
+			}
 		}
 
 		h2 {
@@ -217,4 +237,39 @@
 		}
 	}
 
+}
+
+.menu_mobile-scroll {
+	margin: 0px 0 25px;
+	display: none;
+
+	@media screen and(max-width:  $width-1024) {
+		display: block;
+	}
+}
+
+.menu_mobile-scroll .simplebar-content {
+	margin: 20px 3px;
+	display: flex;
+
+	.menu_mobile-scroll__item {
+		margin-right: 20px;
+		padding-bottom: 40px;
+		text-transform: uppercase;
+		flex: 0 0 auto;
+		color: #2F2F2F;
+		opacity: .5;
+		text-decoration: none;
+		font-weight: 600;
+
+		&.active {
+			opacity: 1;
+			text-decoration: underline;
+		}
+	}
+	
+}
+
+.open-menu {
+	overflow: hidden;
 }

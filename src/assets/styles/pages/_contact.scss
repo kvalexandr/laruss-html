@@ -50,6 +50,22 @@
   &-item {
     margin-bottom: 40px;
 
+    &__phone_left {
+      display: none;
+
+      @media screen and(max-width:  $width-640) {
+        display: block;
+      }
+    }
+
+    &__phone_right {
+      display: block;
+
+      @media screen and(max-width:  $width-640) {
+        display: none;
+      }
+    }
+
     &__title {
       font-weight: 700;
       font-size: 14px;
@@ -71,7 +87,7 @@
 		}
 
 		&__day {
-			width: 60px;
+			margin-right: 10px;
 		}
 
     &__subtitle {
