@@ -266,6 +266,15 @@
       text-align: justify;
     }
   }
+
+  &__subtitle {
+    text-align: center; 
+    font-family:Roboto Slab,serif; 
+    font-size: 18px; 
+    color: #414141;
+    font-weight: 600;
+    margin: 10px auto;
+  }
 }
 
 .main-card {
@@ -308,7 +317,7 @@
 
   &__title {
     font-weight: 600;
-    font-size: 21px;
+    font-size: 20px;
     line-height: 29px;
     text-transform: uppercase;
 
@@ -523,8 +532,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        min-height: 290px;
-        max-height: 400px;
       }
     }
   }

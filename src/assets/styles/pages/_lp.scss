@@ -207,28 +207,37 @@
     a {
       text-decoration: none;
       color: #333;
+
+      &:hover {
+        color: #f5203e;
+      }
     }
+  }
+
+  &__link {
+    &:hover {
+      color: #f5203e;
+
+      & ~ span {
+        color: #f5203e;
+        border-bottom: 1px solid #f5203e;
+      }
+    }
+
+    
   }
 
   &__info {
 
     &-number {
-      font-size: 40px;
+      font-size: 36px;
       line-height: 1.2;
-
-      &:hover {
-        opacity: .7;
-      }
+      font-weight: 300;
     }
 
     &-cur {
-      color: #828282;
-      font-size: 14px;
+      font-size: 12px;
       line-height: 18px;
-
-      &:hover {
-        opacity: .7;
-      }
 
       @media screen and(max-width:  $width-1024) {
         font-size: 12px;
@@ -236,21 +245,15 @@
     }
 
     &-text {
-      color: #828282;
-      font-size: 14px;
+      font-size: 12px;
       line-height: 18px;
 
       &:hover {
-        opacity: .7;
+        color: #f5203e;
       }
 
       @media screen and(max-width:  $width-640) {
         font-size: 16px;
-        line-height: 21px;
-        color: #333333;
-        text-transform: uppercase;
-        font-family: 'Roboto Slab', serif;
-        font-weight: 700;
       }
     }
     
@@ -260,9 +263,11 @@
       margin-top: 8px;
       border-bottom: 1px solid #333;
       cursor: pointer;
+      font-size: 12px;
 
       &:hover {
-        opacity: .7;
+        color: #f5203e;
+        border-bottom: 1px solid #f5203e;
       }
     }
   }
@@ -319,6 +324,7 @@
 .rating-area {
   overflow: hidden;
   margin-bottom: 20px;
+  padding-top: 10px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -331,13 +337,11 @@
   width: 62px;
   padding: 0;
   cursor: pointer;
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 35px;
+  line-height: 35px;
   color: #d3d3d3;
 }
-.rating-area:not(:checked) > label:before {
-	content: '★';
-}
+
 .rating-area > input:checked ~ label {
 	color: #FFB71B;
 }
@@ -358,25 +362,23 @@
 
 .rating-area-score {
   display: flex;
+  padding-top: 10px;
 }
 .rating-area-score span {
   display: inline-block;
   width: 62px;
   padding: 0;
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 35px;
+  line-height: 35px;
   color: #d3d3d3;
 }
 .rating-area-score span.fill-star {
   color: #FFB71B;
 }
-.rating-area-score span::before {
-  content: '★';
-}
 
 
 .iframe {
-  .header, .footer, .slider-top-wrapper, .breadcrumbs, .sidebar, .rmenu-side__tools {
+  .header, .footer, .slider-top-wrapper, .breadcrumbs, .sidebar, .header-ridgepole, .restaurant-fixed {
     display: none;
   }
 }

@@ -135,7 +135,7 @@ $(document).ready(() => {
     infinite: true,
     speed: 800,
     variableWidth: true,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 1,
     nextArrow: '<button type="button" class="btn-slider btn-slider-next"><span></span></button>',
     prevArrow: '<button type="button" class="btn-slider btn-slider-prev"><span></span></button>',
@@ -155,6 +155,7 @@ $(document).ready(() => {
       {
         breakpoint: 768,
         settings: {
+          slidesToShow: 4,
           variableWidth: true,
           arrows: false
         }
@@ -162,6 +163,7 @@ $(document).ready(() => {
       {
         breakpoint: 640,
         settings: {
+          slidesToShow: 3,
           variableWidth: true,
           arrows: false
         }

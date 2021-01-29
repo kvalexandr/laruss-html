@@ -64,6 +64,11 @@
     line-height: 29px;
     text-transform: uppercase;
     color: #2F2F2F;
+
+    @media screen and(max-width:  $width-1024) {
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
 
   .text {
@@ -143,7 +148,7 @@
   }
 
   .input-w90 {
-    width: calc(100% - 93px);
+    width: calc(100% - 100px);
   }
 
   input {
@@ -161,6 +166,7 @@
     padding: 10px 0px;
     height: 54px;
     border: none;
+    font-size: 12px;
   }
 
   &.date {
@@ -204,4 +210,8 @@ button.close {
 .success hr {
   border: 1px solid #999;
   margin: 20px 0;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #ccc;
 }

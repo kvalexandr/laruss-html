@@ -25,6 +25,7 @@ block content
       .main-page__title
         img.main-page__title-icon(src="assets/images/icons/fork-knife.svg")
         h1.main-h1 Ресторан для корпоратива LARUSS
+        div.main-page__subtitle наб. реки Мойки, 37, на углу Дворцовой площади, м.Гостиный Двор, м.Невский просп
         p
           | Ресторан для корпоратива LARUSS расположен в цент ре Санкт-Петербурга — на Дворцовой площади. Стильное заведение быстро стало популярным балгодаря вкусной кухне и теплой атмосфере. 
         p
@@ -96,10 +97,10 @@ block content
             .menu-block__info
               ul
                 li
-                  a(href="#")
+                  span.menu-block__link(data-fancybox-iframe data-type="iframe" data-src="http://localhost:8080/menu?iframe=y" href="javascript:;")
                     .menu-block__info-number 1900
                     .menu-block__info-cur руб./гость
-                  a.menu-block__info-link.btn-modal-menu(data-fancybox-iframe data-type="iframe" data-src="http://localhost:8080/menu?iframe=y" href="javascript:;") Смотреть
+                  span.menu-block__info-link(data-fancybox-iframe data-type="iframe" data-src="http://localhost:8080/menu?iframe=y" href="javascript:;") Смотреть
                 li
                   a(href="#")
                     .menu-block__info-number 2550
@@ -123,6 +124,7 @@ block content
               span или
             .menu-block__subtitle мы составим индивидуальное меню по вашему желанию и бюджету
             .menu-block__mainmenu
+              img(src="assets/images/fork-knife.png")
               .menu-block__mainmenu-title Основное меню и карта бара
               a.menu-block__mainmenu-link Смотреть
 
@@ -140,8 +142,8 @@ block content
                   span Дата*
                   input.input-w90(autocomplete="off" type="text" name="name")
                 .form-cell
-                  span Кол-во гостей
-                  input.input-w90(autocomplete="off" class="phone" placeholder="до 65" type="text" name="phone")
+                  span Кол-во гостей*
+                  input.input-w90(autocomplete="off" class="phone" type="text" name="phone")
               .form-row
                 .form-cell
                   span Ваше имя*
@@ -194,24 +196,25 @@ block content
           .score__count (<span>7</span> оценок)
           .score__star
               | <div class="rating-area-score">
-              |     <span class="fill-star"></span>
-              |     <span class="fill-star"></span>
-              |     <span class="fill-star"></span>
-              |     <span class="fill-star"></span>
-              |     <span></span>
+              |     <span class="fill-star"><i class="fas fa-star"></i></span>
+              |     <span class="fill-star"><i class="fas fa-star"></i></span>
+              |     <span class="fill-star"><i class="fas fa-star"></i></span>
+              |     <span class="fill-star"><i class="fas fa-star-half-alt"></i></span>
+              |     <span><i class="fas fa-star"></i></span>
               | </div>
 
           .score__est-title Оцение наше мероприятие
           .score__star
               | <div class="rating-area">
               |     <input required type="radio" id="star-5" name="rating" value="5">
-              |     <label for="star-5" title="Оценка «5»"></label>
+              |     <label class="fas fa-star" for="star-5" title="Оценка «5»"></label>
               |     <input required type="radio" id="star-4" name="rating" value="4">
-              |     <label for="star-4" title="Оценка «4»"></label>
+              |     <label class="fas fa-star" for="star-4" title="Оценка «4»"></label>
               |     <input required type="radio" id="star-3" name="rating" value="3">
-              |     <label for="star-3" title="Оценка «3»"></label>
+              |     <label class="fas fa-star" for="star-3" title="Оценка «3»"></label>
               |     <input required type="radio" id="star-2" name="rating" value="2">
-              |     <label for="star-2" title="Оценка «2»"></label>
+              |     <label class="fas fa-star" for="star-2" title="Оценка «2»"></label>
               |     <input required type="radio" id="star-1" name="rating" value="1">
-              |     <label for="star-1" title="Оценка «1»"></label>
+              |     <label class="fas fa-star" for="star-1" title="Оценка «1»"></label>
               | </div>
+  #scroll_top.scroll_top--wide

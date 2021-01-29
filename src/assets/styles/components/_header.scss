@@ -5,19 +5,21 @@
 	height: 120px;
 	flex: 0 0 auto;
 	background: #fff;
+	z-index: 200;
 
 	@media screen and(max-width:  $width-1024) {
-		height: 105px;
+		height: 138px;
 		position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 20;
+    
 	}
 	
 	&__container {
 		display: flex;
 		justify-content: space-between;
+		min-height: 80px;
 	}
 
 	&__logo {
@@ -115,6 +117,10 @@
 
 			&-item {
 				position: relative;
+
+				&.parent {
+					margin-right: 10px;
+				}
 
 				&.parent::after {
 					content: "";
@@ -234,10 +240,11 @@
 	&-address-mobile {
 		text-align: center;
 		margin-top: 15px;
+		background: #fff;
 		display: none;
 
 		@media screen and(max-width:  $width-1024) {
-			display: none;
+			display: block;
 		}
 	}
 
@@ -308,7 +315,7 @@
 	background-color: #fff;
 	border-top: 1px solid #F5F5F5;
 	height: 100vh;
-	padding-bottom: 160px;
+	padding-bottom: 170px;
 }
 .mobile-menu__list {
   transition: .5s;
@@ -334,10 +341,9 @@
 		background: url("../images/icons/menu-arrow.svg");
 		width: 5px;
 		height: 3px;
-		display: block;
-		position: absolute;
-    right: 0;
-    top: 50%;
+		display: inline-block;
+    margin-left: 8px;
+    margin-bottom: 3px;
 	}
 }
 .mobile-menu__checkbox {
@@ -468,8 +474,29 @@
 				color: #A8A28F;
 				font-size: 10px;
 				line-height: 1.4;
-				font-style: italic;
+				text-transform: uppercase;
 			}
 		}
+	}
+}
+
+.header-ridgepole {
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+	background: #f6f2ed;
+
+	@media screen and(max-width:  $width-1024) {
+		padding-top: 140px;
+    margin-bottom: -105px;
+	}
+
+	&__text {
+		font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    text-transform: uppercase;
+		color: #333;
+		text-align: center;
 	}
 }

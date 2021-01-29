@@ -16,25 +16,25 @@
               .form-row
                 .form-cell.date
                   span Дата*
-                  input.input-w90.datetimepicker.form-control#datetimepicker(type="text" data-provide="datepicker")
+                  input.input-w90.datetimepicker.form-control#datetimepicker(type="text" data-provide="datepicker" placeholder="дата и время")
                 .form-cell
                   span Кол-во гостей
-                  input.input-w90(autocomplete="off" class="phone" placeholder="" type="text" name="")
+                  input.input-w90(autocomplete="off" type="text" name="" placeholder="65")
               .form-row
                 .form-cell
                   span Ваше имя*
-                  input.input-w90(autocomplete="off" type="text" name="name")
+                  input.input-w90(autocomplete="off" type="text" name="name" placeholder="Ваше имя")
                 .form-cell
                   span Телефон
-                  input.input-w70(autocomplete="off" class="phone" type="text" name="phone")
+                  input.input-w70(autocomplete="off" class="phone" type="text" name="phone" placeholder="+7 (000) 000-00-00")
               .form-row
                 .form-cell.form-cell--full
                   span Эл. почта
-                  input.input-w70(autocomplete="off" type="email" name="email")
+                  input.input-w70(autocomplete="off" type="email" name="email" placeholder="email@emai.ru")
               .form-row
                 .form-cell.form-cell--full.form-cell--textarea
                   span Комментарий
-                  textarea(autocomplete="off" type="text" name="name")
+                  textarea(autocomplete="off" type="text" name="name" placeholder="Ваши пожелания")
               .policy Зказывая банкет, вы принимаете <a href="/policy/">пользовательское соглашение</a>
               button.btn.btn-big.btn-send-reserve(type="submit") Заказать
               .success-text__form Спасибо! Ваш заказ успешно отправлен.

@@ -20,11 +20,22 @@ $(document).ready(() => {
     new SimpleBar(menuMobile, { autoHide: false });
   }
 
+  const menuSide = document.querySelector('.rmenu-side-sticky');
+  if (menuSide) {
+    new SimpleBar(menuSide, { autoHide: false });
+  }
+
+  const sidebar = document.querySelector('.sidebar');
+  if (sidebar) {
+    new SimpleBar(sidebar, { autoHide: false });
+  }
+
   $.datetimepicker.setLocale('ru');
   $('.datetimepicker').datetimepicker({
     format: 'd.m.Y H:i',
     formatDate: 'd.m.Y',
     timepicker: true,
+    step: 15,
     daysOfWeekDisabled: [0, 6],
     disabledDates: disabledDates,
     onGenerate: function (ct) {
@@ -185,19 +196,6 @@ $(document).ready(() => {
     return false;
   });
 
-  function CallPrint(strid) {
-    var prtContent = document.getElementById(strid);
-    var prtCSS = '<link rel="stylesheet" href="/local/assets/css/app.css" type="text/css" />';
-    var WinPrint = window.open('', '', 'left=50,top=50,width=800,height=640,toolbar=0,scrollbars=1,status=0');
-    WinPrint.document.write('<div id="print" class="contentpane">');
-    WinPrint.document.write(prtCSS);
-    WinPrint.document.write(prtContent.innerHTML);
-    WinPrint.document.write('</div>');
-    WinPrint.document.close();
-    WinPrint.focus();
-    WinPrint.print();
-  }
-
   function postData(url, options) {
     const requestOptions = {
       method: 'POST',
@@ -276,7 +274,18 @@ $(document).ready(() => {
   }
 
 
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() > 100) {
+      $('#scroll_top').show();
+    } else {
+      $('#scroll_top').hide();
+    }
+  });
+
+  $('#scroll_top').on('click', function () {
+    $('html, body').animate({ scrollTop: 0 }, 600);
+    return false;
+  });
+
 
 });
-
-

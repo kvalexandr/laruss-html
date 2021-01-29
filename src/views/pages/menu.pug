@@ -62,6 +62,7 @@ block content
                 a.rmenu-side__kitchen.rmenu-side__tools-link(href="#") О руской кухне
                 a.rmenu-side__download.rmenu-side__tools-link(href="#") Скачать договор
           .rmenu-main-section#print-content
+            a#scroll_top(href="#")
             .menu_mobile-scroll
               a.menu_mobile-scroll__item(href="#") Основное меню
               a.menu_mobile-scroll__item(href="#") Фуршетное меню
@@ -118,7 +119,7 @@ block content
                       .rmenu-main__name-section
                         .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
                         .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
-                      .rmenu-main__price 350 ₽
+                      .rmenu-main__price <div class="rub">350 <span>₽</span></div>
                   .rmenu-main__item
                     .rmenu-main__name-price
                       .rmenu-main__name-section
@@ -175,3 +176,7 @@ block content
                       .rmenu-main__name Сет русских закусок. Буженина, сало соленое, грузди, сельдь, сало копченое, соленые огурцы
                       .rmenu-main__curs Russian appetizers. Home made pork, smoked and     salted tallow, milk mushrooms, herring, pickles / 215 гр
                     .rmenu-main__price 350 ₽
+            .rmenu-mobile__tools
+              a.rmenu-side__print.rmenu-side__tools-link(href="#" onClick="javascript:CallPrint('print-content');") Распечатать меню
+              a.rmenu-side__kitchen.rmenu-side__tools-link(href="#") О руской кухне
+              a.rmenu-side__download.rmenu-side__tools-link(href="#") Скачать договор
